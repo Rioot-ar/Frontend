@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { ExperienciaService } from 'src/app/service/experiencia.service';
 import { item } from '../item';
-import { ITEM } from '../mock-item';
 
 @Component({
   selector: 'app-experiencia',
@@ -8,6 +8,12 @@ import { ITEM } from '../mock-item';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent {
-  items:item[]=ITEM;
+  items: item[]=[];
+  constructor(private expService:ExperienciaService){}
 
+  ngOnInit():void{
+    this.expService.getExperiencias().subscribe((exps)=>{
+      this.items=exps;
+    })
+  }
 }
