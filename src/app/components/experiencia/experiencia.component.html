@@ -2,7 +2,7 @@
     <h1>Experiencia</h1>
 
     <div *ngFor="let item of items" class="experiencia-content">
-        <img src="{{item.img}}" >
-        <app-info-item title="{{item.title}}" descript="{{item.descript}}" ></app-info-item>
+        <img [src]="item.img" >
+        <app-info-item title="{{item.title}}" descript="{{item.descript}}"></app-info-item>
     </div>
 </div>

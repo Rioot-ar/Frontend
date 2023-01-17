@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EducacionService } from 'src/app/service/educacion.service';
+import { PortfolioService } from 'src/app/service/portfolio.service';
 import { item } from '../item';
 
 
@@ -10,11 +10,11 @@ import { item } from '../item';
 })
 export class EducacionComponent {
   items: item[]=[];
-  constructor(private eduService:EducacionService){}
+  constructor(private eduService:PortfolioService){}
 
   ngOnInit():void{
-    this.eduService.getEducacion().subscribe((edus)=>{
-      this.items=edus;
+    this.eduService.getPortfolio().subscribe((edus)=>{
+      this.items=edus.educacion;
     })
   }
 }
