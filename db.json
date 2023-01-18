@@ -55,24 +55,55 @@
             ],
             "barprogress":[
                 {
+                    "id":1,
                     "skill": "JavaScript",
                     "level":"60"
                 },
                 {
+                    "id":2,
                     "skill": "TypeScript",
                     "level":"50"
                 },
                 {
+                    "id":3,
                     "skill": "CSS",
                     "level":"80"
                 },
                 {
+                    "id":4,
                     "skill": "HTML",
                     "level":"80"
                 },
                 {
+                    "id":5,
                     "skill": "Java",
                     "level":"40"
+                }
+            ],
+            "proyectos":[
+                {
+                    "id": 1,
+                    "title": "Lorem ipsum dolor sit amet",
+                    "descript": "Consectetur adipiscing elit. Phasellus rhoncus ultrices augue quis ullamcorper. Quisque vel hendrerit tortor. Suspendisse ipsum erat, viverra iaculis ante ut, malesuada gravida ex. Integer urna est, venenatis vitae tellus vel, ornare dapibus augue. Nullam eu erat in tortor gravida vestibulum et vitae sem. Nunc interdum eu enim vel suscipit. Morbi sit amet auctor turpis, ac maximus dui. Suspendisse tempus erat at lacus dapibus, quis faucibus eros convallis. Nunc et sem a magna condimentum fringilla. Nunc laoreet enim eu arcu rhoncus, non porta quam sagittis.",
+                    "link":"https://getbootstrap.com/docs/5.3/components/buttons/"
+                },
+                {
+                    "id": 2,
+                    "title": "Dolorem Ipsum dolor sit amet",
+                    "descript": "Consectetur adipiscing elit. Phasellus rhoncus ultrices augue quis ullamcorper. Quisque vel hendrerit tortor. Suspendisse ipsum erat, viverra iaculis ante ut, malesuada gravida ex. Integer urna est, venenatis vitae tellus vel, ornare dapibus augue. Nullam eu erat in tortor gravida vestibulum et vitae sem. Nunc interdum eu enim vel suscipit. Morbi sit amet auctor turpis, ac maximus dui. Suspendisse tempus erat at lacus dapibus, quis faucibus eros convallis. Nunc et sem a magna condimentum fringilla. Nunc laoreet enim eu arcu rhoncus, non porta quam sagittis.",
+                    "link":"https://album.es/blog/uploads/griffinlamb12.png"
+                },    
+                {
+                    "id": 3,
+                    "title": "Honorem ipsum ultrices augue quis",
+                    "descript": "Consectetur adipiscing elit. Phasellus rhoncus ultrices augue quis ullamcorper. Quisque vel hendrerit tortor. Suspendisse ipsum erat, viverra iaculis ante ut, malesuada gravida ex. Integer urna est, venenatis vitae tellus vel, ornare dapibus augue. Nullam eu erat in tortor gravida vestibulum et vitae sem. Nunc interdum eu enim vel suscipit. Morbi sit amet auctor turpis, ac maximus dui. Suspendisse tempus erat at lacus dapibus, quis faucibus eros convallis. Nunc et sem a magna condimentum fringilla. Nunc laoreet enim eu arcu rhoncus, non porta quam sagittis.",
+                    "link":"https://viajerocasual.com/wp-content/uploads/2022/05/paisajes-de-canada-lago-louise.jpg"
+                },    
+                {
+                    "id": 4,
+                    "title": "Imlorem ipsum sit amet auctor turpis",
+                    "descript": "Consectetur adipiscing elit. Phasellus rhoncus ultrices augue quis ullamcorper. Quisque vel hendrerit tortor. Suspendisse ipsum erat, viverra iaculis ante ut, malesuada gravida ex. Integer urna est, venenatis vitae tellus vel, ornare dapibus augue. Nullam eu erat in tortor gravida vestibulum et vitae sem. Nunc interdum eu enim vel suscipit. Morbi sit amet auctor turpis, ac maximus dui. Suspendisse tempus erat at lacus dapibus, quis faucibus eros convallis. Nunc et sem a magna condimentum fringilla. Nunc laoreet enim eu arcu rhoncus, non porta quam sagittis.",
+                    "link":"https://www.vivelanaturaleza.com/wp-content/uploads/2020/05/paisajes-naturales-1024x683.jpg"
                 }
             ]
         }

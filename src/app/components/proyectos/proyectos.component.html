@@ -1,1 +1,9 @@
-<p>proyectos works!</p>
+
+<div class="proyectos-container">
+    <h1>Proyectos</h1>
+
+    <div *ngFor="let proyecto of proyectos" class="experiencia-content">
+        <app-info-item title="{{proyecto.title}}" descript="{{proyecto.descript}}"></app-info-item>
+        <button type="button" class="btn btn-success"><a href="{{proyecto.link}}">Ir</a></button>
+    </div>
+</div>

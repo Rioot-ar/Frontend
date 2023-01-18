@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PortfolioService } from 'src/app/service/portfolio.service';
+import { proyecto } from '../proyectos';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent {
+  proyectos: proyecto[]=[];
+  constructor(private proService:PortfolioService){}
 
+  ngOnInit():void{
+    this.proService.getPortfolio().subscribe((pro)=>{
+      this.proyectos=pro.proyectos;
+    })
+  }
 }
