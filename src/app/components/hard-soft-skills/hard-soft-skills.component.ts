@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PortfolioService } from 'src/app/service/portfolio.service';
+import { skill } from '../skill';
 
 @Component({
   selector: 'app-hard-soft-skills',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./hard-soft-skills.component.css']
 })
 export class HardSoftSkillsComponent {
+  skills: skill[]=[];
+  constructor(private sklService:PortfolioService){}
 
+  ngOnInit():void{
+    this.sklService.getPortfolio().subscribe((skl)=>{
+      this.skills=skl.barprogress;
+    })
+  }
 }

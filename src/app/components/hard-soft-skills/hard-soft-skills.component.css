@@ -1,0 +1,9 @@
+.haso-container{
+    display: flex;
+}
+.haso-content{
+    max-width: 200px;
+    max-height: 200px;
+    width: 20%;
+    height: 20%;
+}
