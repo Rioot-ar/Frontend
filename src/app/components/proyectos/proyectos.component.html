@@ -11,28 +11,27 @@
         </ol>
     
         <div class="carousel-inner" role="listbox">
-          
-    
           <div *ngFor="let proyecto of proyectos" [ngClass]="proyecto.id == 1 ? 'item active' : 'item'">
-                <img src="{{proyecto.link}}" alt="{{proyecto.title}}">
-                <div class="carousel-caption">
+                <div style="display: flex; align-items: start; justify-content: space-evenly;">
+                  <img src="{{proyecto.link}}" alt="{{proyecto.title}}">
+                  <div class="carousel-caption">
                     <h1>{{proyecto.title}}</h1>
                     <p>{{proyecto.descript}}</p>            
                     <button type="button" class="btn btn-success"><a href="{{proyecto.link}}">Ir</a></button>
+                  </div>
                 </div>
-        </div>
+          </div>
     
           
-    
-    
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
     </div>
 </div>
 
