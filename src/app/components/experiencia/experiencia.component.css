@@ -1,7 +1,16 @@
 .experiencia-content{
     display: flex;
     justify-content: center;
-    
+    border-style: solid;
+    border-width: medium;
+    border-color: aqua;
+    border-radius: 5px;
+}
+.experiencia-container{
+    border-style: solid;
+    border-width: medium;
+    border-color: aqua;
+    border-radius: 5px;
 }
 .experiencia-container h1{
     padding-left: 5%;

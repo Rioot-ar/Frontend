@@ -1,10 +1,16 @@
 .educacion-content{
     display: flex;
     justify-content: center;
-    
+    border-style: solid;
+    border-width: medium;
+    border-color: aqua;
+    border-radius: 5px;
 }
-.educacion-container h1{
-    padding-left: 5%;
+.educacion-container{
+    border-style: solid;
+    border-width: medium;
+    border-color: aqua;
+    border-radius: 5px;
 }
 .educacion-content img{
     width: 10%;

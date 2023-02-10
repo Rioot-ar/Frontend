@@ -1,3 +1,17 @@
 .navbar{
     margin-bottom: 0px;
 }
+.navbar-header{
+    width: 100%;
+}
+.dropdown{
+    width: 100%;
+    font-size: 2rem;
+}
+.navbar-right{
+    position: relative;
+    top: -25px;
+}
+.dropdown-menu{
+    color: gray;
+}

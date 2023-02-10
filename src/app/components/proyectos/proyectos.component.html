@@ -12,7 +12,7 @@
     
         <div class="carousel-inner" role="listbox">
           <div *ngFor="let proyecto of proyectos" [ngClass]="proyecto.id == 1 ? 'item active' : 'item'">
-                <div style="display: flex; align-items: start; justify-content: space-evenly;">
+                <div class="content-item">
                   <img src="{{proyecto.link}}" alt="{{proyecto.title}}">
                   <div class="carousel-caption">
                     <h1>{{proyecto.title}}</h1>

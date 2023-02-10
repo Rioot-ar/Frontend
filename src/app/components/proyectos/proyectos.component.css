@@ -7,11 +7,17 @@
 
 .carousel-caption{
   position:relative;
-  display: block;
   text-align: justify;
   width: 30%;
   right: 0;
   left: 0;
 }
 
+.carousel-indicators{
+  bottom: 20px;
+}
 
+.content-item{
+  display: flex; 
+  justify-content: space-evenly;
+}

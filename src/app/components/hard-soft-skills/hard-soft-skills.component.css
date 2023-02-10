@@ -2,4 +2,8 @@
     display: grid;
     width: 100%;
     grid-template-columns: auto auto auto ;
+    border-style: solid;
+    border-width: medium;
+    border-color: aqua;
+    border-radius: 5px;
 }
