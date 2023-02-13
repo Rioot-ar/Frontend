@@ -1,8 +1,7 @@
-
-.item img {
-    margin-left: 10%;
-    width: 30%;
-    max-height:300px;
+.carousel-item img {
+  margin-left: 10%;
+  width: 30%;
+  max-height:300px;
 }
 
 .carousel-caption{
@@ -11,13 +10,9 @@
   width: 30%;
   right: 0;
   left: 0;
-}
-
-.carousel-indicators{
-  bottom: 20px;
-}
-
-.content-item{
+  }
+      
+.active{
   display: flex; 
   justify-content: space-evenly;
 }

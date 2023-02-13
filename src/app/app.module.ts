@@ -14,7 +14,11 @@ import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GraficosComponent } from './components/graficos/graficos.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { ErrorComponent } from './components/error/error.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +31,17 @@ import { GraficosComponent } from './components/graficos/graficos.component';
     EducacionComponent,
     HardSoftSkillsComponent,
     ProyectosComponent,
-    GraficosComponent
+    GraficosComponent,
+    LoginComponent,
+    InicioComponent,
+    DashboardComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
