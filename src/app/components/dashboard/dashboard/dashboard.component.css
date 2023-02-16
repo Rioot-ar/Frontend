@@ -1,5 +1,6 @@
+
 .content-cent{
-    top: 30%;
+    top: 20%;
     left: 20%;
 }
 .nav{
@@ -9,6 +10,20 @@
 .nav-link{
     color: black;
 }
-.tab-pane{
-    position:fixed;
+.editContent{
+    width: 70%;
+    background-color:rgb(42, 120, 165);
+    position: relative;
+}
+.boton-editar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:burlywood;
+    border-color: beige;
+    color: grey;
+}
+
+.modal-dialog{
+    max-width: 70%;
 }
