@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  faPen = faPen;
 
 }

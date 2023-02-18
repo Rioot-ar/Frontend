@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PortfolioService } from 'src/app/service/portfolio.service';
+import { sobreMi } from '../sobreMi';
 
 @Component({
   selector: 'app-acerca-de',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent {
+  item!: sobreMi;
+  constructor(private sobreService:PortfolioService){}
 
+  ngOnInit():void{
+    this.sobreService.getPortfolio().subscribe((sob)=>{
+      this.item=sob.perfil;
+    })
+  }
 }

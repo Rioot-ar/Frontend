@@ -1,6 +1,13 @@
 {
     "portfolio":
         {
+            "perfil":
+                {
+                    "img":"https://www.magneticmag.com/.image/t_share/MTkyNjE2ODg3NDEzMTIyODA5/world-of-warcraft-wallpapers1.webp",
+                    "descript": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet praesentium exercitationem eos deserunt cumque odio fugit blanditiis ducimus numquam? Hic et, maiores obcaecati harum accusantium sint aliquam esse fugit fuga!",
+                    "title": "Junior Fullstack Developer",
+                    "cargo": "Quisque eget leo a tortor sollicitudin varius. Suspendisse hendrerit id mi in finibus. Aliquam aliquam sodales risus eu commodo. Suspendisse gravida magna eget nulla lobortis aliquet. Aliquam rutrum, neque ac blandit gravida, felis augue eleifend lacus, sed vehicula orci odio ac dui. Maecenas commodo quis nulla sit amet lacinia. Praesent posuere luctus purus, nec accumsan eros semper eu. Duis commodo a est at posuere. Aliquam sit amet interdum sem, pharetra posuere ligula."
+                },
             "experiencia":[
                 {
                     "id": 1,

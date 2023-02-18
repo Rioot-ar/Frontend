@@ -1,15 +1,12 @@
 <div class="acerca_de_container">
     <div class="acerca_de_perfil">
-        <img src="https://www.magneticmag.com/.image/t_share/MTkyNjE2ODg3NDEzMTIyODA5/world-of-warcraft-wallpapers1.webp" class="img-acerca-de" alt="perfil">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet praesentium exercitationem eos deserunt cumque odio fugit blanditiis ducimus numquam? Hic et, 
-            maiores obcaecati harum accusantium sint aliquam esse fugit fuga!</p>
+        <img [src]="item.img" class="img-acerca-de" alt="perfil">
+        <p>{{item.descript}}</p>
 
     </div>
     <div class="acerca_de_mi">
-       <app-info-item title="Junior Fullstack Developer" descript="Quisque eget leo a tortor sollicitudin varius. Suspendisse hendrerit id mi in finibus. Aliquam aliquam 
-       sodales risus eu commodo. Suspendisse gravida magna eget nulla lobortis aliquet. Aliquam rutrum, neque ac blandit gravida, felis augue eleifend lacus, sed vehicula 
-       orci odio ac dui. Maecenas commodo quis nulla sit amet lacinia. Praesent posuere luctus purus, nec accumsan eros semper eu. Duis commodo a est at posuere. Aliquam 
-       sit amet interdum sem, pharetra posuere ligula."></app-info-item>
+        <h1>{{item.title}}</h1>
+        <p>{{item.cargo}}</p>
     </div>
 
 </div>

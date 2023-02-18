@@ -12,15 +12,12 @@
     border-color: aqua;
     border-radius: 5px;
 }
-.experiencia-container h1{
-    padding-left: 5%;
-}
 .experiencia-content img{
     width: 10%;
     height: 10%;
     margin: 50px;
 }
-.experiencia-content app-info-item{
+.experiencia-content {
     width: 60%;
     padding: 50px;
 }
