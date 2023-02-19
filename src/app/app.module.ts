@@ -8,8 +8,6 @@ import { NavigatorComponent } from './components/navigator/navigator.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { InfoItemComponent } from './components/info-item/info-item.component';
-import { ExperienciaComponent } from './components/experiencia/experiencia.component';
-import { EducacionComponent } from './components/educacion/educacion.component';
 import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft-skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,6 +17,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SeccionComponent } from './components/seccion/seccion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,15 +26,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BannerComponent,
     AcercaDeComponent,
     InfoItemComponent,
-    ExperienciaComponent,
-    EducacionComponent,
     HardSoftSkillsComponent,
     ProyectosComponent,
     GraficosComponent,
     LoginComponent,
     InicioComponent,
     DashboardComponent,
-    ErrorComponent
+    ErrorComponent,
+    SeccionComponent
   ],
   imports: [
     BrowserModule,

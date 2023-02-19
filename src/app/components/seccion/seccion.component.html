@@ -1,0 +1,13 @@
+<h1>{{tipoSeccion}}</h1>
+<div class="seccion-container">
+  
+
+    <div *ngFor="let item of items" class="seccion-content">
+        <img [src]="item.img" >
+        <div class="descrip-content">
+            <h1>{{item.title}}</h1>
+            <p>{{item.descript}}</p>
+        </div>
+
+    </div>
+</div>

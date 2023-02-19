@@ -8,7 +8,7 @@
                     "title": "Junior Fullstack Developer",
                     "cargo": "Quisque eget leo a tortor sollicitudin varius. Suspendisse hendrerit id mi in finibus. Aliquam aliquam sodales risus eu commodo. Suspendisse gravida magna eget nulla lobortis aliquet. Aliquam rutrum, neque ac blandit gravida, felis augue eleifend lacus, sed vehicula orci odio ac dui. Maecenas commodo quis nulla sit amet lacinia. Praesent posuere luctus purus, nec accumsan eros semper eu. Duis commodo a est at posuere. Aliquam sit amet interdum sem, pharetra posuere ligula."
                 },
-            "experiencia":[
+            "Experiencia":[
                 {
                     "id": 1,
                     "title": "Lorem ipsum dolor sit amet",
@@ -34,7 +34,7 @@
                     "img":"https://www.researchgate.net/profile/Pablo-Caballero-2/publication/328101815/figure/fig18/AS:678371704987657@1538747826575/The-sample-clean-image-200X200-pixels.ppm"
                 }
             ],
-            "educacion":[
+            "Educacion":[
                 {
                     "id": 1,
                     "title": "Lorem ipsum dolor sit amet",
