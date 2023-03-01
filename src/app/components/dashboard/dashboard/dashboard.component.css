@@ -11,7 +11,7 @@
     color: black;
 }
 .editContent{
-    width: 70%;
+    width: 90%;
     background-color:rgb(42, 120, 165);
     position: relative;
 }
@@ -23,6 +23,7 @@
     border-color: beige;
     color: grey;
 }
+
 
 .modal-dialog{
     max-width: 70%;

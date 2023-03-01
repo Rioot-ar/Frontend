@@ -1,0 +1,21 @@
+.seccion-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border: 5px solid salmon;
+    border-radius: 5px;
+}
+.seccion-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.seccion-content img{
+    width: 10%;
+    height: 10%;
+    margin: 50px;
+}
+.seccion-content {
+    width: 80%;
+}

@@ -12,8 +12,8 @@ export class ProyectosComponent {
   constructor(private proService:PortfolioService){}
 
   ngOnInit():void{
-    this.proService.getPortfolio().subscribe((pro)=>{
-      this.proyectos=pro.proyectos;
+    this.proService.getPortfolio("Proyectos").subscribe((pro)=>{
+      this.proyectos=pro;
     })
   }
 }

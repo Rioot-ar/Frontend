@@ -17,6 +17,11 @@ import { DashboardComponent } from './components/dashboard/dashboard/dashboard.c
 import { ErrorComponent } from './components/error/error.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SeccionComponent } from './components/seccion/seccion.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditSeccComponent } from './components/dashboard/edit-secc/edit-secc.component';
+import { AddSeccComponent } from './components/dashboard/add-secc/add-secc.component';
+import { DashboarSeccComponent } from './components/dashboard/dashboar-secc/dashboar-secc.component';
+import { DeleteSeccComponent } from './components/dashboard/delete-secc/delete-secc.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +36,17 @@ import { SeccionComponent } from './components/seccion/seccion.component';
     InicioComponent,
     DashboardComponent,
     ErrorComponent,
-    SeccionComponent
+    SeccionComponent,
+    EditSeccComponent,
+    AddSeccComponent,
+    DashboarSeccComponent,
+    DeleteSeccComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FontAwesomeModule
   ],
   providers: [],

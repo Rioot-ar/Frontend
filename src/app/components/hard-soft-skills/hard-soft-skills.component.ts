@@ -12,8 +12,8 @@ export class HardSoftSkillsComponent {
   constructor(private sklService:PortfolioService){}
 
   ngOnInit():void{
-    this.sklService.getPortfolio().subscribe((skl)=>{
-      this.skills=skl.barprogress;
+    this.sklService.getPortfolio("barprogress").subscribe((skl)=>{
+      this.skills=skl;
     })
   }
 }

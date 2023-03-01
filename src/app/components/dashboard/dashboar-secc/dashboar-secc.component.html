@@ -1,0 +1,14 @@
+<h1>{{tipoSeccion}}</h1>
+<div class="seccion-container">
+  
+
+    <div *ngFor="let item of items" class="seccion-content">
+        <img [src]="item.img" >
+        <div class="descrip-content">
+            <h1>{{item.title}}</h1>
+            <p>{{item.descript}}</p>
+        </div>
+        <app-edit-secc (onEditItem) = "editItem($event)" [item]="item" [tipoSeccion]="tipoSeccion"></app-edit-secc>
+        <app-delete-secc (onDeleteItem) = "deleteItem(item)"  [item]="item" [tipoSeccion]="tipoSeccion"></app-delete-secc>
+    </div>
+</div>

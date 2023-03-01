@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,15 +7,22 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
+
 export class LoginComponent {
+  public formLogin!: FormGroup;
   faBars = faBars;
-  constructor(){}
+
+  constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
-
+    this.formLogin=this.formBuilder.group({
+      user:['',[Validators.required]],
+      password:['',Validators.required]
+    })
   }
-  login(form:NgForm){
-    const user=form.value.usr;
 
-    const password=form.value.pwd;
+  send():any{
+    console.log(this.formLogin.value);
   }
 }

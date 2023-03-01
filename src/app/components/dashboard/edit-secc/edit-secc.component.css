@@ -1,0 +1,9 @@
+.boton-editar{
+    
+    background-color:burlywood;
+    border-color: beige;
+    color: grey;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+}

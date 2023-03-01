@@ -2,8 +2,8 @@
   <div class="d-flex align-items-start position-absolute content-cent">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Perfil</button>
-      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Educacion</button>
-      <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" >Experiencia</button>
+      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Experiencia</button>
+      <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" >Educacion</button>
       <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Habilidades</button>
       <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Proyectos</button>
     </div>
@@ -21,33 +21,37 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <h1>Banner</h1>
-                  <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                    <input type="file" class="form-control" id="inputGroupFile01">
-                  </div>
+                  <form>
+                    <h1>Banner</h1>
+                    <div class="input-group mb-3">
+                      <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                      <input type="file" class="form-control" id="inputGroupFile01">
+                    </div>
+          
+                    <h1>Foto de perfil</h1>
+                    <div class="input-group mb-3">
+                      <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                      <input type="file" class="form-control" id="inputGroupFile02">
+                    </div>
+                    
+                    
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label"><h1>Acerca de mi</h1></label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="acerca de">
+                    </div>
+          
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label"><h1>Titulo de trabajo</h1></label>
+                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="titulo">
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput3" class="form-label"><h1>Perfil de trabajo</h1></label>
+                      <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="perfil">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
 
-                  <h1>Foto de perfil</h1>
-                  <div class="input-group mb-3">
-                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                    <input type="file" class="form-control" id="inputGroupFile02">
-                  </div>
-                  
-                  
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label"><h1>Acerca de mi</h1></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="acerca de">
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label"><h1>Titulo de trabajo</h1></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="titulo">
-                  </div>
-                  
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput3" class="form-label"><h1>Perfil de trabajo</h1></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="perfil">
-                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Terminado</button>
@@ -57,20 +61,35 @@
           </div>
         </div>
       </div>
+
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
         <div class="editContent">
-          <app-seccion tipoSeccion="Experiencia"></app-seccion>
-       </div>
+          <app-dashboar-secc tipoSeccion="Experiencia"></app-dashboar-secc>
+          <app-add-secc tipoSeccion="Experiencia" (onAddSecc)="addSecc($event,'Experiencia')"></app-add-secc>
+
+        </div>
       </div>
         
       <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
-        <app-seccion tipoSeccion="Educacion"></app-seccion>
+        <div class="editContent">
+          <app-dashboar-secc tipoSeccion="Educacion"></app-dashboar-secc>
+          <app-add-secc tipoSeccion="Educacion" (onAddSecc)="addSecc($event,'Educacion')"></app-add-secc>
+       </div>
+
       </div>
       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
-        <app-hard-soft-skills></app-hard-soft-skills>
+        <div class="editContent">
+          <app-hard-soft-skills></app-hard-soft-skills>
+       </div>
+        
       </div>
       <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
-        <app-proyectos></app-proyectos>
+        <div class="editContent">
+          <app-proyectos></app-proyectos>
+       </div>
+        
       </div>
     </div>
   </div>
+
+  

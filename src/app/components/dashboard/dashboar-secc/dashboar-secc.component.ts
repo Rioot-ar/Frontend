@@ -1,13 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PortfolioService } from 'src/app/service/portfolio.service';
-import { item } from '../item';
+import { item } from '../../item';
 
 @Component({
-  selector: 'app-seccion',
-  templateUrl: './seccion.component.html',
-  styleUrls: ['./seccion.component.css']
+  selector: 'app-dashboar-secc',
+  templateUrl: './dashboar-secc.component.html',
+  styleUrls: ['./dashboar-secc.component.css']
 })
-export class SeccionComponent {
+export class DashboarSeccComponent {
   @Input() tipoSeccion:string="";
 
   items: item[]=[];
@@ -29,5 +29,17 @@ export class SeccionComponent {
         break;
     }
 
+  }
+
+  deleteItem(item:item){
+    this.expService.deleteSeccion(item,this.tipoSeccion).subscribe(()=>{
+      this.items= this.items.filter(i=>i.id !== item.id)
+    })
+  }
+  editItem(iteme:item){
+    console.log(iteme);
+    this.expService.editSeccion(iteme,this.tipoSeccion).subscribe(()=>{
+      
+    })
   }
 }

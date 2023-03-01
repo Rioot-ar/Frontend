@@ -3,16 +3,16 @@
     <fa-icon [icon]="faBars"></fa-icon>
   </button>
   <div class="dropdown-menu">
-    <form class="px-4 py-3">
+    <form class="px-4 py-3" [formGroup]="formLogin" (submit)="send()">
       <div class="mb-3">
-        <label for="exampleDropdownFormEmail1" class="form-label">Username</label>
-        <input type="email" class="form-control" id="usr" placeholder="Username">
+        <label for="exampleDropdownFormEmail1" class="form-label">Username: </label>
+        <input id="user" type="text" class="form-control" formControlName="user">
       </div>
       <div class="mb-3">
-        <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Password">
+        <label for="exampleDropdownFormPassword1" class="form-label">Password: </label>
+        <input id="password" type="password" class="form-control" formControlName="password">
       </div>
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button [disabled]="formLogin.invalid" class="btn btn-primary">Sign in</button>
     </form>
   </div>
 </div>

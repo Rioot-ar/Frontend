@@ -12,8 +12,8 @@ export class AcercaDeComponent {
   constructor(private sobreService:PortfolioService){}
 
   ngOnInit():void{
-    this.sobreService.getPortfolio().subscribe((sob)=>{
-      this.item=sob.perfil;
+    this.sobreService.getPortfolio("perfil").subscribe((sob)=>{
+      this.item=sob;
     })
   }
 }
