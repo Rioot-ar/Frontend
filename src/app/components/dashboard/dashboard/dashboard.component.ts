@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { faPen, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { item } from '../../item';
-import { PortfolioService } from '../../../service/portfolio.service'
  
 
 @Component({
@@ -13,10 +11,7 @@ export class DashboardComponent {
   faPen = faPen;
 
 
-  constructor(private portfolioService: PortfolioService){}
+  constructor(){}
   ngOnInit():void{}
 
-  addSecc(item:item,tipoSeccion:String){
-    this.portfolioService.setExperiencia(item,tipoSeccion).subscribe(item=>{});
-  }
 }

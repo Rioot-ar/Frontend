@@ -1,0 +1,15 @@
+<h1>Proyectos</h1>
+<div class="seccion-container">
+  
+
+    <app-add-proyecto (onAddProyecto)="addProyecto($event)"></app-add-proyecto>
+    <div *ngFor="let proyecto of proyectos" class="seccion-content">
+        <img [src]="proyecto.link" >
+        <div class="descrip-content">
+            <h1>{{proyecto.title}}</h1>
+            <p>{{proyecto.descript}}</p>
+        </div>
+        <app-edit-proyecto (onEditProyecto) = "editProyecto($event)" [proyecto]="proyecto"></app-edit-proyecto>
+        <app-delete-proyecto (onDeleteProyecto) = "deleteProyecto(proyecto)"  [proyecto]="proyecto"></app-delete-proyecto>
+    </div>
+</div>

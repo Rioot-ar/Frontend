@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { DeleteProyectoComponent } from './delete-proyecto.component';
+
+describe('DeleteProyectoComponent', () => {
+  let component: DeleteProyectoComponent;
+  let fixture: ComponentFixture<DeleteProyectoComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ DeleteProyectoComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(DeleteProyectoComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

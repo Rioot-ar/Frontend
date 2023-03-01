@@ -24,11 +24,15 @@ export class DashboarSeccComponent {
         this.expService.getPortfolio("Educacion").subscribe((sec)=>{
           this.items=sec;
         })
-      break; 
+      break;
       default:
         break;
     }
 
+  }
+
+  addSecc(item:item){
+    this.expService.setExperiencia(item,this.tipoSeccion).subscribe(item=>{});
   }
 
   deleteItem(item:item){

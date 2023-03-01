@@ -65,7 +65,6 @@
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
         <div class="editContent">
           <app-dashboar-secc tipoSeccion="Experiencia"></app-dashboar-secc>
-          <app-add-secc tipoSeccion="Experiencia" (onAddSecc)="addSecc($event,'Experiencia')"></app-add-secc>
 
         </div>
       </div>
@@ -73,19 +72,18 @@
       <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
         <div class="editContent">
           <app-dashboar-secc tipoSeccion="Educacion"></app-dashboar-secc>
-          <app-add-secc tipoSeccion="Educacion" (onAddSecc)="addSecc($event,'Educacion')"></app-add-secc>
        </div>
 
       </div>
       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
         <div class="editContent">
-          <app-hard-soft-skills></app-hard-soft-skills>
+          <app-dashboard-skills></app-dashboard-skills>
        </div>
         
       </div>
       <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
         <div class="editContent">
-          <app-proyectos></app-proyectos>
+          <app-dashboard-proyecto></app-dashboard-proyecto>
        </div>
         
       </div>

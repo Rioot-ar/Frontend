@@ -2,6 +2,7 @@
 <div class="seccion-container">
   
 
+    <app-add-secc (onAddSecc)="addSecc($event)"></app-add-secc>
     <div *ngFor="let item of items" class="seccion-content">
         <img [src]="item.img" >
         <div class="descrip-content">

@@ -93,9 +93,9 @@
       "level": "80"
     },
     {
-      "id": 5,
       "skill": "Java",
-      "level": "40"
+      "level": "30",
+      "id": 5
     }
   ],
   "proyectos": [

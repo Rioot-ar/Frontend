@@ -22,6 +22,14 @@ import { EditSeccComponent } from './components/dashboard/edit-secc/edit-secc.co
 import { AddSeccComponent } from './components/dashboard/add-secc/add-secc.component';
 import { DashboarSeccComponent } from './components/dashboard/dashboar-secc/dashboar-secc.component';
 import { DeleteSeccComponent } from './components/dashboard/delete-secc/delete-secc.component';
+import { DashboardSkillsComponent } from './components/dashboard/dashboard-skills/dashboard-skills.component';
+import { DeleteSkillComponent } from './components/dashboard/delete-skill/delete-skill.component';
+import { AddSkillComponent } from './components/dashboard/add-skill/add-skill.component';
+import { EditSkillComponent } from './components/dashboard/edit-skill/edit-skill.component';
+import { DashboardProyectoComponent } from './components/dashboard/dashboard-proyecto/dashboard-proyecto.component';
+import { EditProyectoComponent } from './components/dashboard/edit-proyecto/edit-proyecto.component';
+import { DeleteProyectoComponent } from './components/dashboard/delete-proyecto/delete-proyecto.component';
+import { AddProyectoComponent } from './components/dashboard/add-proyecto/add-proyecto.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +48,15 @@ import { DeleteSeccComponent } from './components/dashboard/delete-secc/delete-s
     EditSeccComponent,
     AddSeccComponent,
     DashboarSeccComponent,
-    DeleteSeccComponent
+    DeleteSeccComponent,
+    DashboardSkillsComponent,
+    DeleteSkillComponent,
+    AddSkillComponent,
+    EditSkillComponent,
+    DashboardProyectoComponent,
+    EditProyectoComponent,
+    DeleteProyectoComponent,
+    AddProyectoComponent
   ],
   imports: [
     BrowserModule,

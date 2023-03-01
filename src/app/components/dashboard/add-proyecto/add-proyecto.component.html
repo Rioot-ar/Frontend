@@ -1,0 +1,33 @@
+
+<button type="button" class="btn btn-outline-primary boton-agregar" data-bs-toggle="modal" data-bs-target="#eproyecto">Agregar <fa-icon [icon]="faPlus"></fa-icon></button>
+
+<div class="modal fade" id="eproyecto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Proyecto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formLogin" (submit)="sendItem()">
+          <div class="mb-3">
+            <label for="nombre" class="form-label"><h1>Nombre</h1></label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" formControlName="nombre">
+          </div>
+          <div class="mb-3">
+            <label for="descrip" class="form-label"><h1>Descripcion</h1></label>
+            <input type="text" class="form-control" id="descrip" formControlName="descrip">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="logo"><h1>Link</h1></label>
+            <input type="url" class="form-control" id="logo" formControlName="link">
+          </div>
+          <button class="btn btn-primary" [disabled]="formLogin.invalid">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Terminado</button>
+      </div>
+    </div>
+  </div>
+</div>

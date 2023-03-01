@@ -1,0 +1,28 @@
+<button type="button" class="btn btn-outline-primary boton-editar" data-bs-toggle="modal" [attr.data-bs-target]="'#eskill'+skill.id"><fa-icon [icon]="faPen"></fa-icon></button>
+
+<div class="modal fade" id="eskill{{skill.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Habilidad</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formLogin" (submit)="sendItem()">
+          <div class="mb-3">
+            <label for="nombre" class="form-label"><h1>Skill</h1></label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" formControlName="skill">
+          </div>
+          <div class="mb-3">
+            <label for="descrip" class="form-label"><h1>Nivel</h1></label>
+            <input type="text" class="form-control" id="descrip" formControlName="level">
+          </div>
+          <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Terminado</button>
+      </div>
+    </div>
+  </div>
+</div>
