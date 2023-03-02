@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigatorComponent } from './components/navigator/navigator.component';
-import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft-skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
@@ -30,12 +29,13 @@ import { DashboardProyectoComponent } from './components/dashboard/dashboard-pro
 import { EditProyectoComponent } from './components/dashboard/edit-proyecto/edit-proyecto.component';
 import { DeleteProyectoComponent } from './components/dashboard/delete-proyecto/delete-proyecto.component';
 import { AddProyectoComponent } from './components/dashboard/add-proyecto/add-proyecto.component';
+import { DashboardAcercadeComponent } from './components/dashboard/dashboard-acercade/dashboard-acercade.component';
+import { EditAcercadeComponent } from './components/dashboard/edit-acercade/edit-acercade.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavigatorComponent,
-    BannerComponent,
     AcercaDeComponent,
     HardSoftSkillsComponent,
     ProyectosComponent,
@@ -56,7 +56,9 @@ import { AddProyectoComponent } from './components/dashboard/add-proyecto/add-pr
     DashboardProyectoComponent,
     EditProyectoComponent,
     DeleteProyectoComponent,
-    AddProyectoComponent
+    AddProyectoComponent,
+    DashboardAcercadeComponent,
+    EditAcercadeComponent
   ],
   imports: [
     BrowserModule,

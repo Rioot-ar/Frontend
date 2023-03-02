@@ -4,6 +4,7 @@ import {HttpClient,HttpHandler} from '@angular/common/http'
 import { item } from '../components/item';
 import { skill } from '../components/skill';
 import { proyecto } from '../components/proyectos';
+import { sobreMi } from '../components/sobreMi';
 
 @Injectable({
   providedIn: 'root'
@@ -67,4 +68,13 @@ export class PortfolioService {
     const url = `${this.urlApi}/proyectos/${Proyecto.id}`;
     return this.http.put<proyecto>(url,Proyecto);
   }
+
+
+
+  editSobreMi(sobreMi:sobreMi): Observable<sobreMi>{
+    const url = `${this.urlApi}/perfil`;
+    return this.http.put<sobreMi>(url,sobreMi);
+  }
 }
+
+

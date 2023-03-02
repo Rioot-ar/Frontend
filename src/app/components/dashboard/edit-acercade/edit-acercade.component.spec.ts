@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BannerComponent } from './banner.component';
+import { EditAcercadeComponent } from './edit-acercade.component';
 
-describe('BannerComponent', () => {
-  let component: BannerComponent;
-  let fixture: ComponentFixture<BannerComponent>;
+describe('EditAcercadeComponent', () => {
+  let component: EditAcercadeComponent;
+  let fixture: ComponentFixture<EditAcercadeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BannerComponent ]
+      declarations: [ EditAcercadeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BannerComponent);
+    fixture = TestBed.createComponent(EditAcercadeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

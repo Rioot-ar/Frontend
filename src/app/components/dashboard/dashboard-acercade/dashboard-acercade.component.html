@@ -1,5 +1,6 @@
 <div class="header-banner">
     <img src="{{item.banner}}" class="img-fluid" alt="banner">
+    <app-edit-acercade [sobreMi]="item" (onEditSobreMi)="editSobreMi($event)"></app-edit-acercade>
 </div>
 
 <div class="acerca_de_container">
@@ -14,3 +15,4 @@
     </div>
 
 </div>
+

@@ -1,0 +1,14 @@
+
+.boton-editar{
+    position: absolute;
+    top: 0;
+    left: 90%;
+    background-color:burlywood;
+    border-color: beige;
+    color: grey;
+}
+
+
+.modal-dialog{
+    max-width: 70%;
+}

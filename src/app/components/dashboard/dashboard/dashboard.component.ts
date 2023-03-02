@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faPen, faPlus } from '@fortawesome/free-solid-svg-icons';
  
 
 @Component({
@@ -8,8 +7,6 @@ import { faPen, faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  faPen = faPen;
-
 
   constructor(){}
   ngOnInit():void{}

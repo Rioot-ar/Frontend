@@ -10,55 +10,7 @@
     <div class="tab-content" id="v-pills-tabContent">
       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
         <div class="editContent">
-          <app-banner></app-banner>
-          <app-acerca-de></app-acerca-de>
-          <button type="button" class="btn btn-outline-primary boton-editar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Editar <fa-icon [icon]="faPen"></fa-icon></button>
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Perfil</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <h1>Banner</h1>
-                    <div class="input-group mb-3">
-                      <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                      <input type="file" class="form-control" id="inputGroupFile01">
-                    </div>
-          
-                    <h1>Foto de perfil</h1>
-                    <div class="input-group mb-3">
-                      <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                      <input type="file" class="form-control" id="inputGroupFile02">
-                    </div>
-                    
-                    
-                    <div class="mb-3">
-                      <label for="formGroupExampleInput" class="form-label"><h1>Acerca de mi</h1></label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="acerca de">
-                    </div>
-          
-                    <div class="mb-3">
-                      <label for="formGroupExampleInput2" class="form-label"><h1>Titulo de trabajo</h1></label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="titulo">
-                    </div>
-                    
-                    <div class="mb-3">
-                      <label for="formGroupExampleInput3" class="form-label"><h1>Perfil de trabajo</h1></label>
-                      <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="perfil">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Terminado</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <app-dashboard-acercade></app-dashboard-acercade>
         </div>
       </div>
 
