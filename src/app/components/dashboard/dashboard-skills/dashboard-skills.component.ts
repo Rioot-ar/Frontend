@@ -19,19 +19,20 @@ export class DashboardSkillsComponent {
 
   deleteSkill(skill:skill){
     this.sklService.deleteSkill(skill).subscribe(()=>{
-      this.skills= this.skills.filter(s=>s.id !== skill.id)
+      this.skills= this.skills.filter(s=>s.id !== skill.id);
     })
   }
 
   editSkill(skill:skill){
     this.sklService.editSkill(skill).subscribe(()=>{
-
+      this.skills= this.skills.filter(s=>s.id !== skill.id);
+      this.skills.push(skill);
     })
   }
 
   addSkill(skill:skill){
     this.sklService.addSkill(skill).subscribe(()=>{
-
+      this.skills.push(skill);
     })
   }
 }

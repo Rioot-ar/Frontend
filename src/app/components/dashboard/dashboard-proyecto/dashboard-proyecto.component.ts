@@ -19,7 +19,9 @@ export class DashboardProyectoComponent {
   }
 
   addProyecto(proyecto:proyecto){
-    this.expService.addProyecto(proyecto).subscribe(proyecto=>{});
+    this.expService.addProyecto(proyecto).subscribe(proyecto=>{
+      this.proyectos.push(proyecto);
+    });
   }
 
   deleteProyecto(proyecto:proyecto){
@@ -28,9 +30,9 @@ export class DashboardProyectoComponent {
     })
   }
   editProyecto(proyecto:proyecto){
-    console.log(proyecto);
     this.expService.editProyecto(proyecto).subscribe(()=>{
-      
+      this.proyectos= this.proyectos.filter(i=>i.id !== proyecto.id);
+      this.proyectos.push(proyecto);
     })
   }
 }

@@ -1,6 +1,6 @@
 {
   "perfil": {
-    "img": "https://www.gvme.org/pages/get_image_large.php?id=2548",
+    "img": "https://64.media.tumblr.com/606e64e3ba6fffc581312928b3850333/6c9a190d6f2db885-75/s64x64u_c1/6256eb57abab6b6f1ff15b096423011c623e93fe.pnj",
     "banner": "https://img.freepik.com/free-vector/desert-landscape-with-road-night_107791-10148.jpg?w=1380&t=st=1673895136~exp=1673895736~hmac=f1828abb12b623fa49d629eaed41072e9f18d8bce173dd3a3a7cfca414be1c63",
     "descript": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet praesentium exercitationem eos deserunt cumque odio fugit blanditiis ducimus numquam? Hic et, maiores obcaecati harum accusantium sint aliquam esse fugit fuga!",
     "title": "Junior Fullstack Developer",
@@ -10,14 +10,14 @@
     {
       "id": 1,
       "title": "Linkedin",
-      "link": "https://www.linkedin.com/in/gaston-gimenez-18aaa3245/",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/W-200x200-300dpi.png"
+      "link": "https://www.linkedin.com/in/gaston-gimenez-18aaa3245",
+      "img": "https://sitquije.com/wp-content/uploads/2021/04/linkedin-logo.png"
     },
     {
       "id": 2,
       "title": "GitHub",
       "link": "https://github.com/Rioot-ar",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/W-200x200-300dpi.png"
+      "img": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
     }
   ],
   "Experiencia": [
@@ -75,8 +75,8 @@
   "barprogress": [
     {
       "id": 1,
-      "skill": "JavaScript",
-      "level": "60"
+      "skill": "TypeScript",
+      "level": "50"
     },
     {
       "id": 2,
@@ -89,14 +89,14 @@
       "level": "80"
     },
     {
-      "id": 4,
-      "skill": "HTML",
-      "level": "80"
-    },
-    {
       "skill": "Java",
       "level": "30",
       "id": 5
+    },
+    {
+      "skill": "Angular",
+      "level": "60",
+      "id": 6
     }
   ],
   "proyectos": [
@@ -123,6 +123,12 @@
       "title": "Imlorem ipsum sit amet auctor",
       "descript": "Consectetur adipiscing elit. Phasellus rhoncus ultrices augue quis ullamcorper. Quisque vel hendrerit tortor. Suspendisse ipsum erat, viverra iaculis ante ut, malesuada gravida ex. Integer urna est, venenatis vitae tellus vel, ornare dapibus augue. Nullam eu erat in tortor gravida vestibulum et vitae sem. Nunc interdum eu enim vel suscipit. Morbi sit amet auctor turpis, ac maximus dui. Suspendisse tempus erat at lacus dapibus, quis faucibus eros convallis. Nunc et sem a magna condimentum fringilla. Nunc laoreet enim eu arcu rhoncus, non porta quam sagittis.",
       "link": "https://www.vivelanaturaleza.com/wp-content/uploads/2020/05/paisajes-naturales-1024x683.jpg"
+    },
+    {
+      "title": "Nunc laoreet enim",
+      "descript": "Consectetur adipiscing elit. Phasellus rhoncus ultrices augue quis ullamcorper. Quisque vel hendrerit tortor. Suspendisse ipsum erat, viverra iaculis ante ut, malesuada gravida ex. Integer urna est, venenatis vitae tellus vel, ornare dapibus augue. Nullam eu erat in tortor gravida vestibulum et vitae sem. Nunc interdum eu enim vel suscipit. Morbi sit amet auctor turpis, ac maximus dui. Suspendisse tempus erat at lacus dapibus, quis faucibus eros convallis. Nunc et sem a magna condimentum fringilla. Nunc laoreet enim eu arcu rhoncus, non porta quam sagittis.",
+      "link": "http://store-images.s-microsoft.com/image/apps.49745.9007199266437737.188b2a07-b170-4fe0-a52a-63f919ad6d32.47320de6-0cfc-4757-a926-0cfcd81b9d65",
+      "id": 5
     }
   ]
 }

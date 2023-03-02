@@ -17,6 +17,8 @@ export class DashboardAcercadeComponent {
     })
   }
   editSobreMi(item:sobreMi){
-    this.sobreService.editSobreMi(item).subscribe(()=>{});
+    this.sobreService.editSobreMi(item).subscribe(()=>{
+      this.item=item;
+    });
   }
 }

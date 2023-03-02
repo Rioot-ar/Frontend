@@ -1,3 +1,4 @@
-.navbar{
-    position: relative;
+.container-fluid{
+    display: flex;
+    align-items: center;
 }

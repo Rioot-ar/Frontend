@@ -31,6 +31,11 @@ import { DeleteProyectoComponent } from './components/dashboard/delete-proyecto/
 import { AddProyectoComponent } from './components/dashboard/add-proyecto/add-proyecto.component';
 import { DashboardAcercadeComponent } from './components/dashboard/dashboard-acercade/dashboard-acercade.component';
 import { EditAcercadeComponent } from './components/dashboard/edit-acercade/edit-acercade.component';
+import { RedesComponent } from './components/redes/redes.component';
+import { DashboardRedComponent } from './components/dashboard/dashboard-red/dashboard-red.component';
+import { AddRedComponent } from './components/dashboard/add-red/add-red.component';
+import { DeleteRedComponent } from './components/dashboard/delete-red/delete-red.component';
+import { EditRedComponent } from './components/dashboard/edit-red/edit-red.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +63,12 @@ import { EditAcercadeComponent } from './components/dashboard/edit-acercade/edit
     DeleteProyectoComponent,
     AddProyectoComponent,
     DashboardAcercadeComponent,
-    EditAcercadeComponent
+    EditAcercadeComponent,
+    RedesComponent,
+    DashboardRedComponent,
+    AddRedComponent,
+    DeleteRedComponent,
+    EditRedComponent
   ],
   imports: [
     BrowserModule,

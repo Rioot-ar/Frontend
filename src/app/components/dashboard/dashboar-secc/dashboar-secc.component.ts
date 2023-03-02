@@ -32,18 +32,20 @@ export class DashboarSeccComponent {
   }
 
   addSecc(item:item){
-    this.expService.setExperiencia(item,this.tipoSeccion).subscribe(item=>{});
+    this.expService.setExperiencia(item,this.tipoSeccion).subscribe(item=>{
+      this.items.push(item);
+    });
   }
 
   deleteItem(item:item){
     this.expService.deleteSeccion(item,this.tipoSeccion).subscribe(()=>{
-      this.items= this.items.filter(i=>i.id !== item.id)
+      this.items= this.items.filter(i=>i.id !== item.id);
     })
   }
-  editItem(iteme:item){
-    console.log(iteme);
-    this.expService.editSeccion(iteme,this.tipoSeccion).subscribe(()=>{
-      
+  editItem(item:item){
+    this.expService.editSeccion(item,this.tipoSeccion).subscribe(()=>{
+      this.items= this.items.filter(i=>i.id !== item.id);
+      this.items.push(item);
     })
   }
 }

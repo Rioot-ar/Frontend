@@ -1,6 +1,6 @@
 <h1>Hard & Soft Skills</h1>
+<app-add-skill (onAddSkill)="addSkill($event)"></app-add-skill>
 <div class="haso-container">
-    <app-add-skill (onAddSkill)="addSkill($event)"></app-add-skill>
     <div *ngFor="let skill of skills" class="haso-content">
         <app-graficos skill="{{skill.skill}}" level="{{skill.level}}"></app-graficos>
         <div class="edit-buttons">

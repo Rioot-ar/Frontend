@@ -5,6 +5,7 @@ import { item } from '../components/item';
 import { skill } from '../components/skill';
 import { proyecto } from '../components/proyectos';
 import { sobreMi } from '../components/sobreMi';
+import { redes } from '../components/redes';
 
 @Injectable({
   providedIn: 'root'
@@ -74,6 +75,22 @@ export class PortfolioService {
   editSobreMi(sobreMi:sobreMi): Observable<sobreMi>{
     const url = `${this.urlApi}/perfil`;
     return this.http.put<sobreMi>(url,sobreMi);
+  }
+
+
+  deleteRed(red:redes): Observable<redes>{
+    const url = `${this.urlApi}/redes/${red.id}`;
+    return this.http.delete<redes>(url);
+  }
+
+  editRed(red:redes): Observable<redes>{
+    const url = `${this.urlApi}/redes/${red.id}`;
+    return this.http.put<redes>(url,red);
+  }
+
+  addRed(red:redes): Observable<redes>{
+    const url = `${this.urlApi}/redes`;
+    return this.http.post<redes>(url,red);
   }
 }
 
