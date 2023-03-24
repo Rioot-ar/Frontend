@@ -1,16 +1,25 @@
 <div class="header-banner">
-    <img src="{{item.banner}}" class="img-fluid" alt="banner">
+    <img src="{{persona.url_banner}}" class="img-fluid" alt="banner">
 </div>
 
 <div class="acerca_de_container">
     <div class="acerca_de_perfil">
-        <img [src]="item.img" class="img-acerca-de" alt="perfil">
-        <p>{{item.descript}}</p>
+        <img [src]="persona.url_foto" class="img-acerca-de" alt="perfil">
+        <div>
+            <p>{{persona.nombre}} {{persona.apellido}}</p>
+        </div>
+        <div>
+            <p>{{persona.telefono}}</p>
+        </div>
+        <div>
+            <p>{{persona.correo}}</p>
+        </div>
+        
 
     </div>
     <div class="acerca_de_mi">
-        <h1>{{item.title}}</h1>
-        <p>{{item.cargo}}</p>
+        <h1>{{persona.cargo}}</h1>
+        <p>{{persona.sobre_mi}}</p>
     </div>
 
 </div>

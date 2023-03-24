@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { sobreMi } from '../sobreMi';
+import { Persona } from 'src/app/models/persona';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-acerca-de',
   templateUrl: './acerca-de.component.html',
   styleUrls: ['./acerca-de.component.css']
 })
+
 export class AcercaDeComponent {
-  item!: sobreMi;
-  constructor(private sobreService:PortfolioService){}
+  persona!:Persona;
+  constructor(private personaService:PersonaService){
+    
+  }
 
   ngOnInit():void{
-    this.sobreService.getPortfolio("perfil").subscribe((sob)=>{
-      this.item=sob;
+    this.personaService.getPersona(1).subscribe((sob)=>{
+      console.log(sob);
+      this.persona=sob;
     })
   }
 }
