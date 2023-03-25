@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { item } from '../../item';
+import { Experiencia } from 'src/app/models/experiencia';
 
 @Component({
   selector: 'app-edit-secc',
@@ -10,31 +9,35 @@ import { item } from '../../item';
   styleUrls: ['./edit-secc.component.css']
 })
 export class EditSeccComponent {
-  @Input() item!:item;
-  @Output() onEditItem: EventEmitter<item> = new EventEmitter();
-  @Input() tipoSeccion:string="";
+  @Input() exp!:Experiencia;
+  @Output() onEditExp: EventEmitter<Experiencia> = new EventEmitter();
   
   formLogin!: FormGroup;
   faPen = faPen;
 
-  constructor(private formBuilder: FormBuilder,private folioService:PortfolioService){}
+  constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
-      nombre:[this.item.title,[Validators.required]],
-      descrip:[this.item.descript,Validators.required],
-      logo:[this.item.img,Validators.required]
+      nombre_empresa:[this.exp.nombre_empresa,[Validators.required]],
+      cargo:[this.exp.cargo,[Validators.required]],
+      fecha_inicio:[this.exp.fecha_inicio,[Validators.required]],
+      fecha_fin:[this.exp.fecha_fin,[Validators.required]],
+      descripcion:[this.exp.descripcion,Validators.required],
+      imagen:[this.exp.imagen,Validators.required]
     })
   }
 
-  sendItem():any{
+  sendExperiencia():any{
     const exp = {
-      id:this.item.id,
-      title: this.formLogin.value.nombre,
-      descript: this.formLogin.value.descrip,
-      img: this.formLogin.value.logo
+      id:this.exp.id,
+      nombre_empresa: this.formLogin.value.nombre_empresa,
+      cargo: this.formLogin.value.cargo,
+      fecha_inicio: this.formLogin.value.fecha_inicio,
+      fecha_fin: this.formLogin.value.fecha_fin,
+      descripcion: this.formLogin.value.descripcion,
+      imagen: this.formLogin.value.imagen
     }
-    
-    this.onEditItem.emit(exp);
+    this.onEditExp.emit(exp);
   }
 
 }

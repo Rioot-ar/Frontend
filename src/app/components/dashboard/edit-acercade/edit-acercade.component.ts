@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { sobreMi } from '../../sobreMi';
+import { Persona } from 'src/app/models/persona';
 
 @Component({
   selector: 'app-edit-acercade',
@@ -10,33 +9,41 @@ import { sobreMi } from '../../sobreMi';
   styleUrls: ['./edit-acercade.component.css']
 })
 export class EditAcercadeComponent {
-  @Input() sobreMi!:sobreMi;
-  @Output() onEditSobreMi: EventEmitter<sobreMi> = new EventEmitter();
+  @Input() persona!:Persona;
+  @Output() onEditSobreMi: EventEmitter<Persona> = new EventEmitter();
   
   formLogin!: FormGroup;
   faPen = faPen;
 
-  constructor(private formBuilder: FormBuilder,private folioService:PortfolioService){}
+  constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
-      img:[this.sobreMi.img,[Validators.required]],
-      banner:[this.sobreMi.banner,Validators.required],
-      descript:[this.sobreMi.descript,Validators.required],
-      title:[this.sobreMi.title,Validators.required],
-      cargo:[this.sobreMi.cargo,Validators.required]
+      
+      nombre:[this.persona.nombre,[Validators.required]],
+      apellido:[this.persona.apellido,[Validators.required]],
+      telefono:[this.persona.telefono,[Validators.required]],
+      correo:[this.persona.correo,[Validators.required]],
+      url_foto:[this.persona.url_foto,[Validators.required]],
+      url_banner:[this.persona.url_banner,Validators.required],
+      sobre_mi:[this.persona.sobre_mi,Validators.required],
+      cargo:[this.persona.cargo,Validators.required]
     })
   }
 
   sendItem():any{
-    const exp = {
-      img:this.formLogin.value.img,
-      banner: this.formLogin.value.banner,
-      descript: this.formLogin.value.descript,
-      title: this.formLogin.value.title,
+    const per = {
+      id:this.persona.id,
+      nombre:this.formLogin.value.nombre,
+      apellido:this.formLogin.value.apellido,
+      telefono:this.formLogin.value.telefono,
+      correo:this.formLogin.value.correo,
+      url_foto:this.formLogin.value.url_foto,
+      url_banner: this.formLogin.value.url_banner,
+      sobre_mi:this.formLogin.value.sobre_mi,
       cargo: this.formLogin.value.cargo
     }
     
-    this.onEditSobreMi.emit(exp);
+    this.onEditSobreMi.emit(per);
   }
   
 }

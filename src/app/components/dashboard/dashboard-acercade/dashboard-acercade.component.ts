@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { sobreMi } from '../../sobreMi';
+import { Persona } from 'src/app/models/persona';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-dashboard-acercade',
@@ -8,17 +8,17 @@ import { sobreMi } from '../../sobreMi';
   styleUrls: ['./dashboard-acercade.component.css']
 })
 export class DashboardAcercadeComponent {
-  item!: sobreMi;
-  constructor(private sobreService:PortfolioService){}
+  persona!: Persona;
+  constructor(private personaService:PersonaService){}
 
   ngOnInit():void{
-    this.sobreService.getPortfolio("perfil").subscribe((sob)=>{
-      this.item=sob;
+    this.personaService.getPersona(1).subscribe((sob)=>{
+      this.persona=sob;
     })
   }
-  editSobreMi(item:sobreMi){
-    this.sobreService.editSobreMi(item).subscribe(()=>{
-      this.item=item;
+  editSobreMi(persona:Persona){
+    this.personaService.editPersona(persona).subscribe(()=>{
+      this.persona=persona;
     });
   }
 }

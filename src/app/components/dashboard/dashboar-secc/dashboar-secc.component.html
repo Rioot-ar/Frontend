@@ -1,15 +1,15 @@
-<h1>{{tipoSeccion}}</h1>
+<h1>Experiencia</h1>
 <div class="seccion-container">
   
 
-    <app-add-secc (onAddSecc)="addSecc($event)"></app-add-secc>
-    <div *ngFor="let item of items" class="seccion-content">
-        <img [src]="item.img" >
+    <app-add-secc (onAddExp)="addExperiencia($event)"></app-add-secc>
+    <div *ngFor="let exp of experiencias" class="seccion-content">
+        <img [src]="exp.imagen" >
         <div class="descrip-content">
-            <h1>{{item.title}}</h1>
-            <p>{{item.descript}}</p>
+            <h1>{{exp.cargo}}</h1>
+            <p>{{exp.descripcion}}</p>
         </div>
-        <app-edit-secc (onEditItem) = "editItem($event)" [item]="item" [tipoSeccion]="tipoSeccion"></app-edit-secc>
-        <app-delete-secc (onDeleteItem) = "deleteItem(item)"  [item]="item" [tipoSeccion]="tipoSeccion"></app-delete-secc>
+        <app-edit-secc (onEditExp) = "editExperiencia($event)" [exp]="exp"></app-edit-secc>
+        <app-delete-secc (onDeleteExp) = "deleteExperiencia(exp)"  [exp]="exp"></app-delete-secc>
     </div>
 </div>

@@ -14,7 +14,7 @@ export class PersonaService {
     return this.http.get(`${this.urlApi}/persona/${id}`);
   }
 
-  editSobreMi(persona:Persona): Observable<Persona>{
+  editPersona(persona:Persona): Observable<Persona>{
     const url = `${this.urlApi}/persona/editar`;
     return this.http.put<Persona>(url,persona);
   }

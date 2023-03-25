@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { item } from '../item';
+import { Seccion } from 'src/app/models/seccion';
+import { EducacionService } from 'src/app/service/educacion.service';
+import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
   selector: 'app-seccion',
@@ -10,19 +11,21 @@ import { item } from '../item';
 export class SeccionComponent {
   @Input() tipoSeccion:string="";
 
-  items: item[]=[];
-  constructor(private expService:PortfolioService){}
+  items: Seccion[]=[];
+  constructor(private expService:ExperienciaService, private eduService:EducacionService){}
 
   ngOnInit():void{
     switch (this.tipoSeccion) {
       case "Experiencia":
-        this.expService.getPortfolio("Experiencia").subscribe((sec)=>{
+        this.expService.getExperiencias().subscribe((sec)=>{
           this.items=sec;
+          console.log(this.items);
         })
         break;
       case "Educacion":
-        this.expService.getPortfolio("Educacion").subscribe((sec)=>{
+        this.eduService.getEducaciones().subscribe((sec)=>{
           this.items=sec;
+          console.log(this.items);
         })
       break; 
       default:
