@@ -7,13 +7,13 @@
 
   <div class="carousel-inner">
 
-    <div *ngFor="let proyecto of proyectos" [ngClass]="proyecto.id == 1 ? 'carousel-item active' : 'carousel-item'" >
-            <img src="{{proyecto.imagen}}" alt="{{proyecto.nombre_proyecto}}" class="d-block ">
-            <div class="carousel-caption">
-              <h1>{{proyecto.nombre_proyecto}}</h1>
-              <p>{{proyecto.descripcion}}</p>            
-              <a href="{{proyecto.url_proyecto}}"type="button" class="btn btn-primary">Ir</a>
-            </div>
+    <div *ngFor="let proyecto of proyectos" [ngClass]="actives==proyecto.id ? 'carousel-item active' : 'carousel-item'" >
+      <img src="{{proyecto.imagen}}" alt="{{proyecto.nombre_proyecto}}" class="d-block ">
+      <div class="carousel-caption">
+        <h1>{{proyecto.nombre_proyecto}}</h1>
+        <p>{{proyecto.descripcion}}</p>            
+        <a href="{{proyecto.url_proyecto}}"type="button" class="btn btn-primary">Ir</a>
+      </div>
     </div>
 
   </div>

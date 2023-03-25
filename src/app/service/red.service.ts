@@ -15,17 +15,17 @@ export class RedService {
     return this.http.get(`${this.urlApi}/traer`);
   }
   deleteRed(red:Red): Observable<Red>{
-    const url = `${this.urlApi}/redes/${red.id}`;
+    const url = `${this.urlApi}/borrar/${red.id}`;
     return this.http.delete<Red>(url);
   }
 
   editRed(red:Red): Observable<Red>{
-    const url = `${this.urlApi}/redes/${red.id}`;
+    const url = `${this.urlApi}/editar`;
     return this.http.put<Red>(url,red);
   }
 
   addRed(red:Red): Observable<Red>{
-    const url = `${this.urlApi}/redes`;
+    const url = `${this.urlApi}/crear`;
     return this.http.post<Red>(url,red);
   }
 }

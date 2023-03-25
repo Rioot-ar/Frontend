@@ -1,0 +1,16 @@
+<h1>Educacion</h1>
+<div class="educacion-container">
+  
+
+    <div *ngFor="let item of items" class="educacion-content">
+        <img [src]="item.imagen" >
+        <div class="descrip-content">
+            <h1>{{item.titulo}}</h1>
+            <p>{{item.descripcion}}</p>
+            <div>
+                <span>{{item.fecha_inicio}}</span> - <span>{{item.fecha_fin}}</span>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -23,7 +23,7 @@ export class ProyectoService {
   }
 
   deleteProyecto(proyecto:Proyecto): Observable<Proyecto>{
-    const url = `${this.urlApi}/borar/${proyecto.id}`;
+    const url = `${this.urlApi}/borrar/${proyecto.id}`;
     return this.http.delete<Proyecto>(url);
   }
 

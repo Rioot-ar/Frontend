@@ -1,0 +1,21 @@
+<button type="button" class="btn btn-danger boton-delete" data-bs-toggle="modal" [attr.data-bs-target]="'#d'+edu.id">
+    <fa-icon [icon]="faTimes"></fa-icon>
+  </button>
+  
+  <div class="modal fade" id="d{{edu.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Educacion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Seguro que quieres eliminar la educacion <strong>{{edu.nombre_institucion}}</strong> ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger " (click)="onDelete()" data-bs-dismiss="modal">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -3,11 +3,11 @@ import { Experiencia } from 'src/app/models/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-dashboar-exp',
-  templateUrl: './dashboar-exp.component.html',
-  styleUrls: ['./dashboar-exp.component.css']
+  selector: 'app-dashboard-exp',
+  templateUrl: './dashboard-exp.component.html',
+  styleUrls: ['./dashboard-exp.component.css']
 })
-export class DashboarExpComponent {
+export class DashboardExpComponent {
 
   experiencias: Experiencia[]=[];
   constructor(private expService:ExperienciaService){}
@@ -28,7 +28,6 @@ export class DashboarExpComponent {
 
   deleteExperiencia(exp:Experiencia){
     this.expService.deleteExperiencia(exp).subscribe(()=>{
-      console.log(exp.id);
       this.experiencias= this.experiencias.filter(i=>i.id !== exp.id);
     })
   }

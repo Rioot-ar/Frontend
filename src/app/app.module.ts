@@ -33,9 +33,14 @@ import { DeleteRedComponent } from './components/dashboard/delete-red/delete-red
 import { EditRedComponent } from './components/dashboard/edit-red/edit-red.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { AddExpComponent } from './components/dashboard/add-exp/add-exp.component';
-import { DashboarExpComponent } from './components/dashboard/dashboar-exp/dashboar-exp.component';
 import { DeleteExpComponent } from './components/dashboard/delete-exp/delete-exp.component';
 import { EditExpComponent } from './components/dashboard/edit-exp/edit-exp.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { DashboardEduComponent } from './components/dashboard/dashboard-edu/dashboard-edu.component';
+import { AddEduComponent } from './components/dashboard/add-edu/add-edu.component';
+import { DeleteEduComponent } from './components/dashboard/delete-edu/delete-edu.component';
+import { EditEduComponent } from './components/dashboard/edit-edu/edit-edu.component';
+import { DashboardExpComponent } from './components/dashboard/dashboard-exp/dashboard-exp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +56,6 @@ import { EditExpComponent } from './components/dashboard/edit-exp/edit-exp.compo
     ErrorComponent,
     EditExpComponent,
     AddExpComponent,
-    DashboarExpComponent,
     DeleteExpComponent,
     DashboardSkillsComponent,
     DeleteSkillComponent,
@@ -68,7 +72,13 @@ import { EditExpComponent } from './components/dashboard/edit-exp/edit-exp.compo
     AddRedComponent,
     DeleteRedComponent,
     EditRedComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    EducacionComponent,
+    DashboardEduComponent,
+    AddEduComponent,
+    DeleteEduComponent,
+    EditEduComponent,
+    DashboardExpComponent
   ],
   imports: [
     BrowserModule,

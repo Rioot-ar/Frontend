@@ -2,7 +2,7 @@
 <app-add-skill (onAddSkill)="addSkill($event)"></app-add-skill>
 <div class="haso-container">
     <div *ngFor="let skill of skills" class="haso-content">
-        <app-graficos skill="{{skill.nombre_habilidad}" level="{{skill.nivel}}"></app-graficos>
+        <app-graficos skill={{skill.nombre_habilidad}} level={{skill.nivel}}></app-graficos>
         <div class="edit-buttons">
             <app-edit-skill (onEditSkill)="editSkill($event)" [skill]="skill"></app-edit-skill>
             <app-delete-skill (onDeleteSkill)="deleteSkill($event)" [skill]="skill"></app-delete-skill>

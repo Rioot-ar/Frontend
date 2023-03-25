@@ -1,0 +1,15 @@
+<h1>Educacion</h1>
+<div class="educacion-container">
+  
+
+    <app-add-edu (onAddEdu)="addEducacion($event)"></app-add-edu>
+    <div *ngFor="let edu of educaciones" class="educacion-content">
+        <img [src]="edu.imagen" >
+        <div class="descrip-content">
+            <h1>{{edu.titulo}}</h1>
+            <p>{{edu.descripcion}}</p>
+        </div>
+        <app-edit-edu (onEditEdu) = "editEducacion($event)" [edu]="edu"></app-edit-edu>
+        <app-delete-edu (onDeleteEdu) = "deleteEducacion(edu)"  [edu]="edu"></app-delete-edu>
+    </div>
+</div>
