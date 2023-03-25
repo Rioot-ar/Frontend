@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { proyecto } from '../../proyectos';
+import { Proyecto } from 'src/app/models/proyecto';
 
 @Component({
   selector: 'app-delete-proyecto',
@@ -8,8 +8,8 @@ import { proyecto } from '../../proyectos';
   styleUrls: ['./delete-proyecto.component.css']
 })
 export class DeleteProyectoComponent {
-  @Input() proyecto!:proyecto;
-  @Output() onDeleteProyecto: EventEmitter<proyecto> = new EventEmitter();
+  @Input() proyecto!:Proyecto;
+  @Output() onDeleteProyecto: EventEmitter<Proyecto> = new EventEmitter();
   faTimes = faTimes;
   
 

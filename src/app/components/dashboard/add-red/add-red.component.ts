@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { redes } from '../../redes';
+import { Red } from 'src/app/models/red';
 
 @Component({
   selector: 'app-add-red',
@@ -10,23 +9,23 @@ import { redes } from '../../redes';
   styleUrls: ['./add-red.component.css']
 })
 export class AddRedComponent {
-  @Output() onAddRed: EventEmitter<redes> = new EventEmitter();
+  @Output() onAddRed: EventEmitter<Red> = new EventEmitter();
   formLogin!: FormGroup;
   faPlus=faPlus;
-  constructor(private formBuilder: FormBuilder,private folioService:PortfolioService){}
+  constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
-      title:['',[Validators.required]],
-      link:['',Validators.required],
-      img:['',Validators.required]
+      nombre_red:['',[Validators.required]],
+      url_red:['',Validators.required],
+      imagen:['',Validators.required]
     })
   }
 
-  sendItem():any{
+  sendRed():any{
     const exp = {
-      title: this.formLogin.value.title,
-      link: this.formLogin.value.link,
-      img: this.formLogin.value.img
+      nombre_red: this.formLogin.value.nombre_red,
+      url_red: this.formLogin.value.url_red,
+      imagen: this.formLogin.value.imagen
     }
     this.onAddRed.emit(exp);
   }

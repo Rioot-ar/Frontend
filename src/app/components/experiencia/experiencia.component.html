@@ -1,11 +1,11 @@
-<h1>{{tipoSeccion}}</h1>
-<div class="seccion-container">
+<h1>Experiencia</h1>
+<div class="experiencia-container">
   
 
-    <div *ngFor="let item of items" class="seccion-content">
+    <div *ngFor="let item of items" class="experiencia-content">
         <img [src]="item.imagen" >
         <div class="descrip-content">
-            <h1>{{item.cargo}}{{item.titulo}}</h1>
+            <h1>{{item.cargo}}</h1>
             <p>{{item.descripcion}}</p>
             <div>
                 <span>{{item.fecha_inicio}}</span> - <span>{{item.fecha_fin}}</span>

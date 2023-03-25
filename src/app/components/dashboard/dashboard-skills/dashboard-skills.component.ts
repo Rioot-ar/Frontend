@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { skill } from '../../skill';
+import { Habilidad } from 'src/app/models/habilidad';
+import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
   selector: 'app-dashboard-skills',
@@ -8,29 +8,29 @@ import { skill } from '../../skill';
   styleUrls: ['./dashboard-skills.component.css']
 })
 export class DashboardSkillsComponent {
-  skills: skill[]=[];
-  constructor(private sklService:PortfolioService){}
+  skills: Habilidad[]=[];
+  constructor(private sklService:SkillService){}
 
   ngOnInit():void{
-    this.sklService.getPortfolio("barprogress").subscribe((skl)=>{
+    this.sklService.getSkill().subscribe((skl)=>{
       this.skills=skl;
     })
   }
 
-  deleteSkill(skill:skill){
+  deleteSkill(skill:Habilidad){
     this.sklService.deleteSkill(skill).subscribe(()=>{
       this.skills= this.skills.filter(s=>s.id !== skill.id);
     })
   }
 
-  editSkill(skill:skill){
+  editSkill(skill:Habilidad){
     this.sklService.editSkill(skill).subscribe(()=>{
       this.skills= this.skills.filter(s=>s.id !== skill.id);
       this.skills.push(skill);
     })
   }
 
-  addSkill(skill:skill){
+  addSkill(skill:Habilidad){
     this.sklService.addSkill(skill).subscribe(()=>{
       this.skills.push(skill);
     })

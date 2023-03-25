@@ -3,11 +3,11 @@ import { Experiencia } from 'src/app/models/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-dashboar-secc',
-  templateUrl: './dashboar-secc.component.html',
-  styleUrls: ['./dashboar-secc.component.css']
+  selector: 'app-dashboar-exp',
+  templateUrl: './dashboar-exp.component.html',
+  styleUrls: ['./dashboar-exp.component.css']
 })
-export class DashboarSeccComponent {
+export class DashboarExpComponent {
 
   experiencias: Experiencia[]=[];
   constructor(private expService:ExperienciaService){}

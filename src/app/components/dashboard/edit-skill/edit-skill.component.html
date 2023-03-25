@@ -8,14 +8,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="formLogin" (submit)="sendItem()">
+        <form [formGroup]="formLogin" (submit)="sendHabilidad()">
           <div class="mb-3">
-            <label for="nombre" class="form-label"><h1>Skill</h1></label>
-            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" formControlName="skill">
+            <label for="nombre_habilidad" class="form-label"><h1>Habilidad</h1></label>
+            <input type="text" class="form-control" id="nombre_habilidad" aria-describedby="emailHelp" formControlName="nombre_habilidad">
           </div>
           <div class="mb-3">
-            <label for="descrip" class="form-label"><h1>Nivel</h1></label>
-            <input type="text" class="form-control" id="descrip" formControlName="level">
+            <label for="nivel" class="form-label"><h1>Nivel</h1></label>
+            <input type="text" class="form-control" id="nivel" formControlName="nivel">
           </div>
           <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>
         </form>

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { skill } from '../../skill';
+import { Habilidad } from 'src/app/models/habilidad';
 
 @Component({
   selector: 'app-delete-skill',
@@ -8,8 +8,8 @@ import { skill } from '../../skill';
   styleUrls: ['./delete-skill.component.css']
 })
 export class DeleteSkillComponent {
-  @Input() skill!:skill;
-  @Output() onDeleteSkill:EventEmitter<skill> = new EventEmitter();
+  @Input() skill!:Habilidad;
+  @Output() onDeleteSkill:EventEmitter<Habilidad> = new EventEmitter();
   faTimes=faTimes;
 
   onDelete(){

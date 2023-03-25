@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { skill } from '../../skill';
+import { Habilidad } from 'src/app/models/habilidad';
 
 @Component({
   selector: 'app-add-skill',
@@ -10,25 +9,24 @@ import { skill } from '../../skill';
   styleUrls: ['./add-skill.component.css']
 })
 export class AddSkillComponent {
-  @Input() tipoSeccion:string="";
-  @Output() onAddSkill: EventEmitter<skill> = new EventEmitter();
+  @Output() onAddSkill: EventEmitter<Habilidad> = new EventEmitter();
 
   formLogin!: FormGroup;
   faPlus=faPlus;
 
-  constructor(private formBuilder: FormBuilder,private folioService:PortfolioService){}
+  constructor(private formBuilder: FormBuilder){}
 
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
-      skill:['',[Validators.required]],
-      level:['',Validators.required]
+      nombre_habilidad:['',[Validators.required]],
+      nivel:['',Validators.required]
     })
   }
 
-  sendItem():any{
+  sendHabilidad():any{
     const exp = {
-      skill: this.formLogin.value.skill,
-      level: this.formLogin.value.level
+      nombre_habilidad: this.formLogin.value.nombre_habilidad,
+      nivel: this.formLogin.value.nivel
     }
     this.onAddSkill.emit(exp);
   }

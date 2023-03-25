@@ -7,7 +7,7 @@
 <div class="redes-container">
 
     <div *ngFor="let red of redes" class="redes-content">
-        <img src="{{red.img}}" alt="">
+        <img src="{{red.imagen}}" alt="{{red.nombre_red}}">
         <div class="edit-buttons">
             <app-edit-red (onEditRed)="editRed($event)" [red]="red"></app-edit-red>
             <app-delete-red (onDeleteRed)="deleteRed(red)"  [red]="red"></app-delete-red>

@@ -4,11 +4,11 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { Experiencia } from 'src/app/models/experiencia';
 
 @Component({
-  selector: 'app-edit-secc',
-  templateUrl: './edit-secc.component.html',
-  styleUrls: ['./edit-secc.component.css']
+  selector: 'app-edit-exp',
+  templateUrl: './edit-exp.component.html',
+  styleUrls: ['./edit-exp.component.css']
 })
-export class EditSeccComponent {
+export class EditExpComponent {
   @Input() exp!:Experiencia;
   @Output() onEditExp: EventEmitter<Experiencia> = new EventEmitter();
   

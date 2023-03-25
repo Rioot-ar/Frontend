@@ -5,11 +5,11 @@ import { Experiencia } from 'src/app/models/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-add-secc',
-  templateUrl: './add-secc.component.html',
-  styleUrls: ['./add-secc.component.css']
+  selector: 'app-add-exp',
+  templateUrl: './add-exp.component.html',
+  styleUrls: ['./add-exp.component.css']
 })
-export class AddSeccComponent {
+export class AddExpComponent {
   
   @Output() onAddExp: EventEmitter<Experiencia> = new EventEmitter();
   formLogin!: FormGroup;

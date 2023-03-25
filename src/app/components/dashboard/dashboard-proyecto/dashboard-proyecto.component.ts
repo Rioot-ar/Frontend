@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { proyecto } from '../../proyectos';
+import { Proyecto } from 'src/app/models/proyecto';
+import { ProyectoService } from 'src/app/service/proyecto.service';
 
 @Component({
   selector: 'app-dashboard-proyecto',
@@ -9,27 +9,27 @@ import { proyecto } from '../../proyectos';
 })
 export class DashboardProyectoComponent {
 
-  proyectos: proyecto[]=[];
-  constructor(private expService:PortfolioService){}
+  proyectos: Proyecto[]=[];
+  constructor(private expService:ProyectoService){}
 
   ngOnInit():void{
-    this.expService.getPortfolio("Proyectos").subscribe((sec)=>{
+    this.expService.getProyecto().subscribe((sec)=>{
       this.proyectos=sec;
     })
   }
 
-  addProyecto(proyecto:proyecto){
+  addProyecto(proyecto:Proyecto){
     this.expService.addProyecto(proyecto).subscribe(proyecto=>{
       this.proyectos.push(proyecto);
     });
   }
 
-  deleteProyecto(proyecto:proyecto){
+  deleteProyecto(proyecto:Proyecto){
     this.expService.deleteProyecto(proyecto).subscribe(()=>{
       this.proyectos= this.proyectos.filter(i=>i.id !== proyecto.id)
     })
   }
-  editProyecto(proyecto:proyecto){
+  editProyecto(proyecto:Proyecto){
     this.expService.editProyecto(proyecto).subscribe(()=>{
       this.proyectos= this.proyectos.filter(i=>i.id !== proyecto.id);
       this.proyectos.push(proyecto);

@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { proyecto } from '../../proyectos';
+import { Proyecto } from 'src/app/models/proyecto';
 
 @Component({
   selector: 'app-edit-proyecto',
@@ -10,27 +9,29 @@ import { proyecto } from '../../proyectos';
   styleUrls: ['./edit-proyecto.component.css']
 })
 export class EditProyectoComponent {
-  @Input() proyecto!:proyecto;
-  @Output() onEditProyecto: EventEmitter<proyecto> = new EventEmitter();
+  @Input() proyecto!:Proyecto;
+  @Output() onEditProyecto: EventEmitter<Proyecto> = new EventEmitter();
   
   formLogin!: FormGroup;
   faPen = faPen;
 
-  constructor(private formBuilder: FormBuilder,private folioService:PortfolioService){}
+  constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
-      nombre:[this.proyecto.title,[Validators.required]],
-      descrip:[this.proyecto.descript,Validators.required],
-      link:[this.proyecto.link,Validators.required]
+      nombre_proyecto:[this.proyecto.nombre_proyecto,[Validators.required]],
+      descripcion:[this.proyecto.descripcion,Validators.required],
+      url_proyecto:[this.proyecto.url_proyecto,Validators.required],
+      imagen:[this.proyecto.imagen,Validators.required]
     })
   }
 
-  sendItem():any{
+  sendProyecto():any{
     const exp = {
       id:this.proyecto.id,
-      title: this.formLogin.value.nombre,
-      descript: this.formLogin.value.descrip,
-      link: this.formLogin.value.link
+      nombre_proyecto: this.formLogin.value.nombre_proyecto,
+      descripcion: this.formLogin.value.descripcion,
+      url_proyecto: this.formLogin.value.url_proyecto,
+      imagen: this.formLogin.value.imagen
     }
     
     this.onEditProyecto.emit(exp);

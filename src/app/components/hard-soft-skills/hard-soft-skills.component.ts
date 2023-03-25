@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { skill } from '../skill';
+import { Habilidad } from 'src/app/models/habilidad';
+import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
   selector: 'app-hard-soft-skills',
@@ -8,11 +8,11 @@ import { skill } from '../skill';
   styleUrls: ['./hard-soft-skills.component.css']
 })
 export class HardSoftSkillsComponent {
-  skills: skill[]=[];
-  constructor(private sklService:PortfolioService){}
+  skills: Habilidad[]=[];
+  constructor(private sklService:SkillService){}
 
   ngOnInit():void{
-    this.sklService.getPortfolio("barprogress").subscribe((skl)=>{
+    this.sklService.getSkill().subscribe((skl)=>{
       this.skills=skl;
     })
   }

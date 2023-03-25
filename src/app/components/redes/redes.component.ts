@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from '../../service/portfolio.service';
-import { redes } from '../redes';
+import { Red } from 'src/app/models/red';
+import { RedService } from 'src/app/service/red.service';
 
 @Component({
   selector: 'app-redes',
@@ -9,11 +9,11 @@ import { redes } from '../redes';
 })
 export class RedesComponent {
   
-  redes!:redes[];
-  constructor(private expService:PortfolioService){}
+  redes!:Red[];
+  constructor(private redService:RedService){}
   ngOnInit():void{
 
-    this.expService.getPortfolio("redes").subscribe((red)=>{
+    this.redService.getRed().subscribe((red)=>{
       this.redes=red;
     })
 

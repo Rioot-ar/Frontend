@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { redes } from '../../redes';
+import { Red } from 'src/app/models/red';
 
 @Component({
   selector: 'app-edit-red',
@@ -10,27 +9,27 @@ import { redes } from '../../redes';
   styleUrls: ['./edit-red.component.css']
 })
 export class EditRedComponent {
-  @Input() red!:redes;
-  @Output() onEditRed: EventEmitter<redes> = new EventEmitter();
+  @Input() red!:Red;
+  @Output() onEditRed: EventEmitter<Red> = new EventEmitter();
   
   formLogin!: FormGroup;
   faPen = faPen;
 
-  constructor(private formBuilder: FormBuilder,private folioService:PortfolioService){}
+  constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
-      nombre:[this.red.title,[Validators.required]],
-      descrip:[this.red.link,Validators.required],
-      logo:[this.red.img,Validators.required]
+      nombre_red:[this.red.nombre_red,[Validators.required]],
+      url_red:[this.red.url_red,Validators.required],
+      imagen:[this.red.imagen,Validators.required]
     })
   }
 
-  sendItem():any{
+  sendRed():any{
     const exp = {
       id:this.red.id,
-      title: this.formLogin.value.nombre,
-      link: this.formLogin.value.descrip,
-      img: this.formLogin.value.logo
+      nombre_red: this.formLogin.value.nombre_red,
+      url_red: this.formLogin.value.url_red,
+      imagen: this.formLogin.value.imagen
     }
     
     this.onEditRed.emit(exp);

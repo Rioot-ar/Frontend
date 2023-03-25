@@ -1,0 +1,15 @@
+<h1>Experiencia</h1>
+<div class="experiencia-container">
+  
+
+    <app-add-exp (onAddExp)="addExperiencia($event)"></app-add-exp>
+    <div *ngFor="let exp of experiencias" class="experiencia-content">
+        <img [src]="exp.imagen" >
+        <div class="descrip-content">
+            <h1>{{exp.cargo}}</h1>
+            <p>{{exp.descripcion}}</p>
+        </div>
+        <app-edit-exp (onEditExp) = "editExperiencia($event)" [exp]="exp"></app-edit-exp>
+        <app-delete-exp (onDeleteExp) = "deleteExperiencia(exp)"  [exp]="exp"></app-delete-exp>
+    </div>
+</div>

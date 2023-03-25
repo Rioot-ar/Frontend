@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
-import { redes } from '../../redes';
+import { Red } from 'src/app/models/red';
+import { RedService } from 'src/app/service/red.service';
 
 @Component({
   selector: 'app-dashboard-red',
@@ -9,29 +9,29 @@ import { redes } from '../../redes';
 })
 export class DashboardRedComponent {
 
-  redes!:redes[];
-  constructor(private portfolioService:PortfolioService){}
+  redes!:Red[];
+  constructor(private redService:RedService){}
   ngOnInit():void{
-    this.portfolioService.getPortfolio("redes").subscribe((redes)=>{
+    this.redService.getRed().subscribe((redes)=>{
       this.redes=redes;
     })
   }
 
-  addRed(red:redes){
-    this.portfolioService.addRed(red).subscribe((red)=>{
+  addRed(red:Red){
+    this.redService.addRed(red).subscribe((red)=>{
       this.redes.push(red);
     });
   }
 
-  editRed(red:redes){ 
-    this.portfolioService.editRed(red).subscribe(()=>{
+  editRed(red:Red){ 
+    this.redService.editRed(red).subscribe(()=>{
       this.redes=this.redes.filter(i=>i.id !== red.id);
       this.redes.push(red);
     });
   }
 
-  deleteRed(red:redes){
-    this.portfolioService.deleteRed(red).subscribe(()=>{
+  deleteRed(red:Red){
+    this.redService.deleteRed(red).subscribe(()=>{
       this.redes=this.redes.filter(i=>i.id !== red.id);
 
     });

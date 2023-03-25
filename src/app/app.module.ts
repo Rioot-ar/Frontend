@@ -15,12 +15,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SeccionComponent } from './components/seccion/seccion.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EditSeccComponent } from './components/dashboard/edit-secc/edit-secc.component';
-import { AddSeccComponent } from './components/dashboard/add-secc/add-secc.component';
-import { DashboarSeccComponent } from './components/dashboard/dashboar-secc/dashboar-secc.component';
-import { DeleteSeccComponent } from './components/dashboard/delete-secc/delete-secc.component';
 import { DashboardSkillsComponent } from './components/dashboard/dashboard-skills/dashboard-skills.component';
 import { DeleteSkillComponent } from './components/dashboard/delete-skill/delete-skill.component';
 import { AddSkillComponent } from './components/dashboard/add-skill/add-skill.component';
@@ -36,6 +31,11 @@ import { DashboardRedComponent } from './components/dashboard/dashboard-red/dash
 import { AddRedComponent } from './components/dashboard/add-red/add-red.component';
 import { DeleteRedComponent } from './components/dashboard/delete-red/delete-red.component';
 import { EditRedComponent } from './components/dashboard/edit-red/edit-red.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { AddExpComponent } from './components/dashboard/add-exp/add-exp.component';
+import { DashboarExpComponent } from './components/dashboard/dashboar-exp/dashboar-exp.component';
+import { DeleteExpComponent } from './components/dashboard/delete-exp/delete-exp.component';
+import { EditExpComponent } from './components/dashboard/edit-exp/edit-exp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,11 +49,10 @@ import { EditRedComponent } from './components/dashboard/edit-red/edit-red.compo
     InicioComponent,
     DashboardComponent,
     ErrorComponent,
-    SeccionComponent,
-    EditSeccComponent,
-    AddSeccComponent,
-    DashboarSeccComponent,
-    DeleteSeccComponent,
+    EditExpComponent,
+    AddExpComponent,
+    DashboarExpComponent,
+    DeleteExpComponent,
     DashboardSkillsComponent,
     DeleteSkillComponent,
     AddSkillComponent,
@@ -68,7 +67,8 @@ import { EditRedComponent } from './components/dashboard/edit-red/edit-red.compo
     DashboardRedComponent,
     AddRedComponent,
     DeleteRedComponent,
-    EditRedComponent
+    EditRedComponent,
+    ExperienciaComponent
   ],
   imports: [
     BrowserModule,

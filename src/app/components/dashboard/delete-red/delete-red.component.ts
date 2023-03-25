@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { redes } from '../../redes';
+import { Red } from 'src/app/models/red';
 
 @Component({
   selector: 'app-delete-red',
@@ -8,8 +8,8 @@ import { redes } from '../../redes';
   styleUrls: ['./delete-red.component.css']
 })
 export class DeleteRedComponent {
-  @Input() red!:redes;
-  @Output() onDeleteRed: EventEmitter<redes> = new EventEmitter();
+  @Input() red!:Red;
+  @Output() onDeleteRed: EventEmitter<Red> = new EventEmitter();
   faTimes = faTimes;
   
 
