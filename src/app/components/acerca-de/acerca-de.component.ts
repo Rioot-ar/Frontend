@@ -16,8 +16,7 @@ export class AcercaDeComponent {
 
   ngOnInit():void{
     this.personaService.getPersona(1).subscribe((sob)=>{
-      console.log(sob);
-      this.persona=sob;
+      this.persona=sob[0];
     })
   }
 }

@@ -1,26 +1,32 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
+import { Credenciales } from '../models/credenciales';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  url="https://localhost:8080/autorizacion/login";
-  currentUserSubjet: BehaviorSubject<any>;
-  constructor(private http:HttpClient) {
-    this.currentUserSubjet=new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')||'{}'));
-   }
+  url="http://localhost:8080/login";
+  constructor(private http:HttpClient) {}
 
-   iniciarSesion(credentials:any):Observable<any>{
-    return this.http.post(this.url,credentials).pipe(map(data=>{
-      sessionStorage.setItem('currentUser',JSON.stringify(data));
-      this.currentUserSubjet.next(data);
-      return data;
+   iniciarSesion(credentials:Credenciales){
+    return this.http.post(this.url,credentials,{
+      observe:'response'
+    }).pipe(map((response: HttpResponse<any>)=>{
+      const body=response.body;
+      const headers = response.headers;
+
+      const bearerToken = headers.get('Authorization')!;
+      const token = bearerToken.replace('bearer','');
+
+      localStorage.setItem('token',token);
+
+      return body;
     }))
    }
 
-   get UsuarioAutenticado(){
-    return this.currentUserSubjet.value;
+   getToken(){
+    return localStorage.getItem('token');
    }
 }

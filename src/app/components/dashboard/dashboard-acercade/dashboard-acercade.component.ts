@@ -13,7 +13,7 @@ export class DashboardAcercadeComponent {
 
   ngOnInit():void{
     this.personaService.getPersona(1).subscribe((sob)=>{
-      this.persona=sob;
+      this.persona=sob[0];
     })
   }
   editSobreMi(persona:Persona){

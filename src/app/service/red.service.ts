@@ -8,7 +8,7 @@ import { Red } from '../models/red';
 })
 export class RedService {
 
-  private urlApi = 'http://localhost:8080/red';
+  private urlApi = 'http://localhost:8080/api/red';
   constructor(private http:HttpClient) { }
   
   getRed(): Observable<any>{

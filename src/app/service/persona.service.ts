@@ -7,15 +7,15 @@ import { Persona } from '../models/persona';
   providedIn: 'root'
 })
 export class PersonaService {
-  private urlApi = 'http://localhost:8080';
+  private urlApi = 'http://localhost:8080/api/persona';
   constructor(private http:HttpClient) { }
 
   getPersona(id:number): Observable<any>{
-    return this.http.get(`${this.urlApi}/persona/${id}`);
+    return this.http.get(`${this.urlApi}/traer`);
   }
 
   editPersona(persona:Persona): Observable<Persona>{
-    const url = `${this.urlApi}/persona/editar`;
+    const url = `${this.urlApi}/editar`;
     return this.http.put<Persona>(url,persona);
   }
 }

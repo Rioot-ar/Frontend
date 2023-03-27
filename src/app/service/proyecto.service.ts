@@ -8,7 +8,7 @@ import { Proyecto } from '../models/proyecto';
 })
 export class ProyectoService {
 
-  private urlApi = 'http://localhost:8080/proyecto';
+  private urlApi = 'http://localhost:8080/api/proyecto';
   constructor(private http:HttpClient) { }
   
   getProyecto(): Observable<any>{

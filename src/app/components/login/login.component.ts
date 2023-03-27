@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Credenciales } from 'src/app/models/credenciales';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -15,6 +16,7 @@ import { AuthService } from 'src/app/service/auth.service';
 export class LoginComponent {
   public formLogin: FormGroup;
   faBars = faBars;
+  
 
   constructor(private formBuilder: FormBuilder, private auth:AuthService, private ruta:Router){
     this.formLogin=this.formBuilder.group({
@@ -25,20 +27,20 @@ export class LoginComponent {
   ngOnInit():void{
   }
 
-  send(event:Event):any{
-    // event.preventDefault;
-    // this.auth.iniciarSesion(this.formLogin.value).subscribe(data=>{
-    //   console.log("DATA: "+JSON.stringify(data));
-    //   this.ruta.navigate(['/dashboard']);
-    // })
+  send(event:Event){
+
+    const creds = {
+      email: this.formLogin.value.user,
+      password: this.formLogin.value.password
+    }
+    this.auth.iniciarSesion(creds)
+      .subscribe(response=>{
+        
+        this.ruta.navigate(['/dashboard']);
+      })
+
 
   }
 
-  get User(){
-    return this.formLogin.get('user');
-  }
   
-  get Password(){
-    return this.formLogin.get('password');
-  }
 }

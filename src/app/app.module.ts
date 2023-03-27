@@ -8,7 +8,7 @@ import { NavigatorComponent } from './components/navigator/navigator.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft-skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { GraficosComponent } from './components/graficos/graficos.component';
 import { LoginComponent } from './components/login/login.component';
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -41,6 +41,7 @@ import { AddEduComponent } from './components/dashboard/add-edu/add-edu.componen
 import { DeleteEduComponent } from './components/dashboard/delete-edu/delete-edu.component';
 import { EditEduComponent } from './components/dashboard/edit-edu/edit-edu.component';
 import { DashboardExpComponent } from './components/dashboard/dashboard-exp/dashboard-exp.component';
+import { AuthInterceptor } from './service/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +88,11 @@ import { DashboardExpComponent } from './components/dashboard/dashboard-exp/dash
     ReactiveFormsModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

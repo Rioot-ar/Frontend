@@ -8,7 +8,7 @@ import { Habilidad } from '../models/habilidad';
 })
 export class SkillService {
 
-  private urlApi = 'http://localhost:8080/habilidad';
+  private urlApi = 'http://localhost:8080/api/habilidad';
   constructor(private http:HttpClient) { }
   
   getSkill(): Observable<any>{

@@ -8,7 +8,7 @@ import { Educacion } from '../models/educacion';
 })
 export class EducacionService {
 
-  private urlApi = 'http://localhost:8080/educacion';
+  private urlApi = 'http://localhost:8080/api/educacion';
   constructor(private http:HttpClient) { }
 
   getEducaciones(): Observable<any>{

@@ -8,7 +8,7 @@ import { Experiencia } from '../models/experiencia';
 })
 export class ExperienciaService {
 
-  private urlApi = 'http://localhost:8080/experiencia';
+  private urlApi = 'http://localhost:8080/api/experiencia';
   constructor(private http:HttpClient) { }
 
   getExperiencias(): Observable<any>{

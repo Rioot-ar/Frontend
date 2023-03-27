@@ -13,12 +13,9 @@ export class GuardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-      let currentUser=this.auth.UsuarioAutenticado;
-
-      if ( currentUser && currentUser.accessToken){
+      if ( this.auth.getToken()){
         return true;
       }else{
-
         this.rutas.navigate(['/']);
         return false;
       }
