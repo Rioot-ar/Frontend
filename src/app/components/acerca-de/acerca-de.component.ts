@@ -10,13 +10,14 @@ import { PersonaService } from 'src/app/service/persona.service';
 
 export class AcercaDeComponent {
   persona!:Persona;
+  
   constructor(private personaService:PersonaService){
-    
-  }
-
-  ngOnInit():void{
     this.personaService.getPersona(1).subscribe((sob)=>{
       this.persona=sob[0];
     })
+  }
+
+  ngOnInit():void{
+
   }
 }

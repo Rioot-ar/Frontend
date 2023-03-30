@@ -1,5 +1,5 @@
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+  <button *ngIf="!logStatus" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
     <fa-icon [icon]="faBars"></fa-icon>
   </button>
   <div class="dropdown-menu">
@@ -15,4 +15,9 @@
       <button [disabled]="formLogin.invalid" class="btn btn-primary">Ingresar</button>
     </form>
   </div>
+
+
+  <button *ngIf="logStatus" type="button" class="btn btn-secondary" (click)="logout()">
+    <fa-icon [icon]="faDungeon"></fa-icon>
+  </button>
 </div>

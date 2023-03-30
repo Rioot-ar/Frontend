@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faDungeon } from '@fortawesome/free-solid-svg-icons';
 import { Credenciales } from 'src/app/models/credenciales';
 import { AuthService } from 'src/app/service/auth.service';
 
@@ -16,6 +16,8 @@ import { AuthService } from 'src/app/service/auth.service';
 export class LoginComponent {
   public formLogin: FormGroup;
   faBars = faBars;
+  faDungeon = faDungeon;
+  logStatus:boolean;
   
 
   constructor(private formBuilder: FormBuilder, private auth:AuthService, private ruta:Router){
@@ -23,8 +25,16 @@ export class LoginComponent {
       user:['',[Validators.required]],
       password:['',Validators.required]
     })
+    this.logStatus=auth.getStatus();
   }
   ngOnInit():void{
+
+
+  }
+
+  logout(){
+    this.auth.cerrarSesion();
+    this.ruta.navigate(['']);
   }
 
   send(event:Event){

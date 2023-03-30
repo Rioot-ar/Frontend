@@ -26,7 +26,19 @@ export class AuthService {
     }))
    }
 
+   getStatus(){
+    if(this.getToken()){
+      return true;
+    }else{
+      return false;
+    }
+   }
+
    getToken(){
     return localStorage.getItem('token');
+   }
+
+   cerrarSesion(){
+    localStorage.removeItem('token');
    }
 }
