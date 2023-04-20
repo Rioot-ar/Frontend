@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { faBars, faDungeon } from '@fortawesome/free-solid-svg-icons';
-import { Credenciales } from 'src/app/models/credenciales';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -34,7 +33,7 @@ export class LoginComponent {
 
   logout(){
     this.auth.cerrarSesion();
-    this.ruta.navigate(['']);
+    this.ruta.navigate([""]);
   }
 
   send(event:Event){

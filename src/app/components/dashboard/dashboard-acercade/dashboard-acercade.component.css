@@ -1,31 +1,14 @@
-.acerca_de_perfil{
-    width: 35%;
-    margin-left: 50px;
-}
-
-.acerca_de_mi{
-    width: 60%;
-    margin: 60px;
-}
-
-.acerca_de_perfil p{
-    width: 80%;
+.header-banner{
+    position: relative;
+    justify-content: center;
+    background-size:cover;
 }
 
 .img-acerca-de{
     border-radius: 50%;
     margin-top: -80px;
-    width: 50%;
-}
-
-.acerca_de_container{
-    display: flex;
-    justify-content: center;
-}
-
-.header-banner{
-    justify-content: center;
-    background-size:cover;
+    width: 235px;
+    position: relative;
 }
 
 .img-fluid {

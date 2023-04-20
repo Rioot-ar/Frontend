@@ -1,18 +1,16 @@
-.carousel-item img {
-  margin-left: 10%;
-  width: 30%;
-  max-height:300px;
+.active{
+  display: flex;
+}
+.carousel-caption{
+  position: initial;
+}
+.img-pr{
+  margin-left: 8.33%;
+  height: 200px;
 }
 
-.carousel-caption{
-  position:relative;
-  text-align: justify;
-  width: 30%;
-  right: 0;
-  left: 0;
+@media(max-width:576px){
+  .img-pr{
+    height: 150px;
   }
-      
-.active{
-  display: flex; 
-  justify-content: space-evenly;
 }

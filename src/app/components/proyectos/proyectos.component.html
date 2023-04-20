@@ -1,30 +1,30 @@
 
 <div class="proyectos-container">
-    <h1>Proyectos</h1>
+  <h1 class="text-center text-lg-start ms-lg-5">Proyectos</h1>
 
-    
-<div id="carouselProyects" class="carousel">
+  <div id="carouselProyects" class="carousel">
 
-  <div class="carousel-inner">
+    <div class="carousel-inner">
 
-    <div *ngFor="let proyecto of proyectos" [ngClass]="actives==proyecto.id ? 'carousel-item active' : 'carousel-item'" >
-      <img src="{{proyecto.imagen}}" alt="{{proyecto.nombre_proyecto}}" class="d-block ">
-      <div class="carousel-caption">
-        <h1>{{proyecto.nombre_proyecto}}</h1>
-        <p>{{proyecto.descripcion}}</p>            
-        <a href="{{proyecto.url_proyecto}}"type="button" class="btn btn-primary">Ir</a>
+      <div *ngFor="let proyecto of proyectos" class="justify-content-center" [ngClass]="actives==proyecto.id ? 'carousel-item active' : 'carousel-item'" >
+        <img src="{{proyecto.imagen}}" class="col-3 img-pr" alt="{{proyecto.nombre_proyecto}}">
+        <div class="carousel-caption col-6">
+          <h1>{{proyecto.nombre_proyecto}}</h1>
+          <p>{{proyecto.descripcion}}</p>            
+          <a href="{{proyecto.url_proyecto}}"type="button" class="btn btn-primary">Ir</a>
+        </div>
       </div>
+
     </div>
 
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyects" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselProyects" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
   </div>
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyects" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselProyects" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-
 </div>

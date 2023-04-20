@@ -42,6 +42,7 @@ import { DeleteEduComponent } from './components/dashboard/delete-edu/delete-edu
 import { EditEduComponent } from './components/dashboard/edit-edu/edit-edu.component';
 import { DashboardExpComponent } from './components/dashboard/dashboard-exp/dashboard-exp.component';
 import { AuthInterceptor } from './service/auth.interceptor';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +80,8 @@ import { AuthInterceptor } from './service/auth.interceptor';
     AddEduComponent,
     DeleteEduComponent,
     EditEduComponent,
-    DashboardExpComponent
+    DashboardExpComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@
   <button *ngIf="!logStatus" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
     <fa-icon [icon]="faBars"></fa-icon>
   </button>
+  
   <div class="dropdown-menu">
     <form class="px-4 py-3" [formGroup]="formLogin" (ngSubmit)="send($event)">
       <div class="mb-3">

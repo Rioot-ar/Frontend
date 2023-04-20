@@ -1,21 +1,13 @@
-.experiencia-content{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    border: 5px solid salmon;
-    border-radius: 5px;
-}
-.experiencia-container{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-}
-.experiencia-content img{
-    width: 10%;
-    height: 10%;
+.img-sec{
+    width: 200px;
+    height: auto;
     margin: 50px;
 }
-.experiencia-content {
-    width: 80%;
+
+@media(max-width: 992px){
+    .img-sec{
+        width: 70%;
+        height: 70%;
+        margin: 15px;
+    }
 }

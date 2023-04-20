@@ -1,21 +1,9 @@
-.educacion-content{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    border: 5px solid salmon;
-    border-radius: 5px;
+.img-edu{
+    width: 15%;
 }
-.educacion-container{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-}
-.educacion-content img{
-    width: 10%;
-    height: 10%;
-    margin: 50px;
-}
-.educacion-content {
-    width: 80%;
+
+@media(max-width: 992px){
+    .img-edu{
+        width: 30%;
+    }
 }

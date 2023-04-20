@@ -1,15 +1,20 @@
-<h1>Educacion</h1>
+<div class="d-flex justify-content-between align-items-center">
+    <h1>Educacion</h1>
+    <app-add-edu (onAddEdu)="addEducacion($event)"></app-add-edu>
+</div>
+
 <div class="educacion-container">
   
-
-    <app-add-edu (onAddEdu)="addEducacion($event)"></app-add-edu>
-    <div *ngFor="let edu of educaciones" class="educacion-content">
-        <img [src]="edu.imagen" >
-        <div class="descrip-content">
+    <div *ngFor="let edu of educaciones" class="row m-0 mt-5 justify-content-center align-items-center border border-4 border-warning">
+        <img [src]="edu.imagen" class="col-12 col-lg-3 img-edu m-4">
+        <div class="col-12 col-lg-6 text-center text-lg-start">
             <h1>{{edu.titulo}}</h1>
             <p>{{edu.descripcion}}</p>
         </div>
-        <app-edit-edu (onEditEdu) = "editEducacion($event)" [edu]="edu"></app-edit-edu>
-        <app-delete-edu (onDeleteEdu) = "deleteEducacion(edu)"  [edu]="edu"></app-delete-edu>
+
+        <div class=" d-flex col-12 col-lg-3 justify-content-lg-end justify-content-center">
+            <app-edit-edu (onEditEdu) = "editEducacion($event)" [edu]="edu"></app-edit-edu>
+            <app-delete-edu (onDeleteEdu) = "deleteEducacion(edu)"  [edu]="edu"></app-delete-edu>
+        </div>
     </div>
 </div>

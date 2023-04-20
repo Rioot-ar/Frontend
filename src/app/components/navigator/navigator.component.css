@@ -1,4 +1,11 @@
-.container-fluid{
-    display: flex;
-    align-items: center;
+@media(max-width:992px){
+    .navbar-brand{
+        width: 80%;
+    }
+    .navbar-toggler-icon{
+        width: 0.9rem;
+    }
+    .show{
+        display: flex;
+    }
 }

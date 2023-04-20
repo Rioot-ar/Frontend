@@ -1,15 +1,17 @@
-<h1>Experiencia</h1>
-<div class="experiencia-container">
-  
 
+<div class="d-flex justify-content-between align-items-center">
+    <h1>Experiencia</h1>
     <app-add-exp (onAddExp)="addExperiencia($event)"></app-add-exp>
-    <div *ngFor="let exp of experiencias" class="experiencia-content">
-        <img [src]="exp.imagen" >
-        <div class="descrip-content">
-            <h1>{{exp.cargo}}</h1>
-            <p>{{exp.descripcion}}</p>
-        </div>
+</div>
+
+<div *ngFor="let exp of experiencias" class="row m-0 mt-5 justify-content-center align-items-center border border-4 border-warning">
+    <img [src]="exp.imagen" class="col-12 col-lg-3 img-exp m-4">
+    <div class="col-12 col-lg-6 text-center text-lg-start">
+        <h1>{{exp.cargo}}</h1>
+        <p>{{exp.descripcion}}</p>
+    </div>
+    <div class=" d-flex col-12 col-lg-3 justify-content-lg-end justify-content-center">
         <app-edit-exp (onEditExp) = "editExperiencia($event)" [exp]="exp"></app-edit-exp>
-        <app-delete-exp (onDeleteExp) = "deleteExperiencia(exp)"  [exp]="exp"></app-delete-exp>
+        <app-delete-exp (onDeleteExp) = "deleteExperiencia(exp)"  [exp]="exp"></app-delete-exp>    
     </div>
 </div>

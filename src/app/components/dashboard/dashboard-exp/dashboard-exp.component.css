@@ -1,21 +1,9 @@
-.experiencia-content{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    border: 5px solid salmon;
-    border-radius: 5px;
+.img-exp{
+    width: 15%;
 }
-.experiencia-container{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-}
-.experiencia-content img{
-    width: 10%;
-    height: 10%;
-    margin: 50px;
-}
-.experiencia-content {
-    width: 80%;
+
+@media(max-width: 992px){
+    .img-exp{
+        width: 30%;
+    }
 }

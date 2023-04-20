@@ -1,25 +1,35 @@
-<div class="header-banner">
-    <img [src]="persona.url_banner" class="img-fluid" alt="banner">
-</div>
+<div class="">
 
-<div class="acerca_de_container">
-    <div class="acerca_de_perfil">
-        <img [src]="persona.url_foto" class="img-acerca-de" alt="perfil">
-        <div>
-            <p>{{persona.nombre}} {{persona.apellido}}</p>
-        </div>
-        <div>
-            <p>{{persona.telefono}}</p>
-        </div>
-        <div>
-            <p>{{persona.correo}}</p>
-        </div>
-        
-
+    <div class="">
+        <img [src]="persona.url_banner" class="img-banner col-12" alt="banner">
     </div>
-    <div class="acerca_de_mi">
-        <h1>{{persona.cargo}}</h1>
-        <p>{{persona.sobre_mi}}</p>
-    </div>
+    
+    <div class="d-flex flex-wrap">
+        <div class="col-12 col-md-5 text-center px-5 pb-2">
 
+            <img [src]="persona.url_foto" class="img-acerca-de" alt="perfil">
+            <div>
+                <p>Hola, mi nombre es <strong>{{persona.nombre}} {{persona.apellido}}</strong>, 
+                    y soy {{persona.cargo}}
+                </p>
+            </div>
+            <p>
+                <strong>Contacto</strong>
+            </p>
+            <div>
+                <p>Telefono: {{persona.telefono}}</p>
+            </div>
+            <div>
+                <p>Email: {{persona.correo}}</p>
+            </div>
+            
+    
+        </div>
+        <div class="col-12 col-md-7 px-5 pb-2">
+            <h2>{{persona.cargo}}</h2>
+            <p>{{persona.sobre_mi}}</p>
+        </div>
+    
+    </div>
+    
 </div>

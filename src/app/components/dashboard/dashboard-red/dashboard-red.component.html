@@ -1,14 +1,14 @@
-<div class="header-red">
+<div class="d-flex justify-content-between align-items-center">
     <h1>Redes</h1>    
     <app-add-red (onAddRed)="addRed($event)"></app-add-red>
 </div>
 
 
-<div class="redes-container">
+<div class="row flex-wrap justify-content-start m-0">
 
-    <div *ngFor="let red of redes" class="redes-content">
-        <img src="{{red.imagen}}" alt="{{red.nombre_red}}">
-        <div class="edit-buttons">
+    <div *ngFor="let red of redes" class=" d-flex col-12 col-lg-2 flex-column mt-4">
+        <img src="{{red.imagen}}" alt="{{red.nombre_red}}" class=" img-red d-flex align-self-center ">
+        <div class="d-flex justify-content-between">
             <app-edit-red (onEditRed)="editRed($event)" [red]="red"></app-edit-red>
             <app-delete-red (onDeleteRed)="deleteRed(red)"  [red]="red"></app-delete-red>
         </div>
