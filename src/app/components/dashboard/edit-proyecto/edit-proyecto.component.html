@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-outline-primary boton-editar" data-bs-toggle="modal" [attr.data-bs-target]="'#eproyecto'+proyecto.id"><fa-icon [icon]="faPen"></fa-icon></button>
+<button type="button" class="btn boton-editar" data-bs-toggle="modal" [attr.data-bs-target]="'#eproyecto'+proyecto.id"><fa-icon [icon]="faPen"></fa-icon></button>
 
 <div class="modal fade" id="eproyecto{{proyecto.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
     <div class="modal-dialog">
@@ -25,11 +25,10 @@
             <label for="url_proyecto" class="form-label"><h1>Link del Proyecto</h1></label>
             <input type="url" class="form-control" id="url_proyecto" aria-describedby="emailHelp" formControlName="url_proyecto">
           </div>
-          <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>
+          <div class="modal-footer">
+            <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>
+          </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Terminado</button>
       </div>
     </div>
   </div>

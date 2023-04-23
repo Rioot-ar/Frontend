@@ -41,12 +41,10 @@
             <label class="form-label" for="sobre_mi"><h1>Descripcion habilidades</h1></label>
             <input type="url" class="form-control" id="sobre_mi" formControlName="sobre_mi">
           </div>
-          
-          <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>
+          <div class="modal-footer">
+            <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>
+          </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Terminado</button>
       </div>
     </div>
   </div>

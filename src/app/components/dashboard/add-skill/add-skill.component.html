@@ -18,11 +18,10 @@
             <label for="nivel" class="form-label"><h1>Nivel</h1></label>
             <input type="text" class="form-control" id="nivel" formControlName="nivel">
           </div>
-          <button class="btn btn-primary" [disabled]="formLogin.invalid">Submit</button>
+          <div class="modal-footer">
+            <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>
+          </div>     
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Terminado</button>
       </div>
     </div>
   </div>

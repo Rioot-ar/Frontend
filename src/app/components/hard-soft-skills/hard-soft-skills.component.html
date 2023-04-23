@@ -1,8 +1,7 @@
 <h1 class="text-center text-lg-start ms-lg-5">Hard & Soft Skills</h1>
-<div class="haso-container">
-    
-    <div *ngFor="let skill of skills" class="haso-content">
+
+<div class="d-flex flex-wrap justify-content-center m-2 mb-0">
+    <div *ngFor="let skill of skills" class="m-3">
         <app-graficos skill="{{skill.nombre_habilidad}}" level="{{skill.nivel}}"></app-graficos>
     </div>
-
 </div>
