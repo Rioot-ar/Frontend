@@ -15,7 +15,15 @@ export class EducacionComponent {
     
     this.eduService.getEducaciones().subscribe((sec)=>{
       this.items=sec;
+      //Mostrar primero las mas recientes
+      this.items.sort((b, a) => {
+        const fechaFinA = new Date(a.fecha_fin);
+        const fechaFinB = new Date(b.fecha_fin);
+        console.log
+        return fechaFinA.getTime() - fechaFinB.getTime();
+      });
     })
 
   }
+
 }

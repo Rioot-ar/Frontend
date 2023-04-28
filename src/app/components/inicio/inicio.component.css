@@ -1,4 +1,4 @@
 .mainContent{
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    color: rgb(239, 245, 206);
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
 }

@@ -1,3 +1,12 @@
 body{
-    background-color: rgb(112, 79, 85);
+    background:#9abcd4;  
+    font-family:Arial, Helvetica, sans-serif;
+    color:antiquewhite;
+}
+
+h2, h1{
+    background: linear-gradient(to right, #e3f2fd, #1565c0 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

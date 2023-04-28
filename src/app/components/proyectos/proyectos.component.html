@@ -6,7 +6,7 @@
 
     <div class="carousel-inner">
 
-      <div *ngFor="let proyecto of proyectos" class="justify-content-center" [ngClass]="actives==proyecto.id ? 'carousel-item active' : 'carousel-item'" >
+      <div *ngFor="let proyecto of proyectos" class="justify-content-center align-items-center" [ngClass]="actives==proyecto.id ? 'carousel-item active' : 'carousel-item'" >
         <img src="{{proyecto.imagen}}" class="col-3 img-pr" alt="{{proyecto.nombre_proyecto}}">
         <div class="carousel-caption col-6">
           <h1>{{proyecto.nombre_proyecto}}</h1>
@@ -17,11 +17,11 @@
 
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyects" data-bs-slide="prev">
+    <button class="carousel-control-prev w-auto" type="button" data-bs-target="#carouselProyects" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselProyects" data-bs-slide="next">
+    <button class="carousel-control-next w-auto" type="button" data-bs-target="#carouselProyects" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>

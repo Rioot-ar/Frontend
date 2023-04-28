@@ -7,9 +7,13 @@
     position: absolute;
 }
 
-
 .modal-dialog{
     max-width: 70%;
+}
+
+h1{
+    background: none;
+    -webkit-text-fill-color:black;
 }
 
 @media(max-width:992px){

@@ -16,6 +16,14 @@ export class DashboardExpComponent {
     
     this.expService.getExperiencias().subscribe((exp)=>{
       this.experiencias=exp;
+      
+      //Mostrar primero las mas recientes
+      this.experiencias.sort((b, a) => {
+        const fechaFinA = new Date(a.fecha_fin);
+        const fechaFinB = new Date(b.fecha_fin);
+        console.log
+        return fechaFinA.getTime() - fechaFinB.getTime();
+      });
     })
 
   }

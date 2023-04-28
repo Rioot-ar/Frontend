@@ -6,3 +6,8 @@
     display: flex;
     align-items: center;
 }
+
+h1{
+    background: none;
+    -webkit-text-fill-color:black;
+}
