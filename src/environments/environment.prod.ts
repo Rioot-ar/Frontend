@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    serviceUrl: 'URL_DE_TU_SERVICIO_PRODUCCION'
+    serviceUrl: 'https://portfolio-backend-eiu3.onrender.com/'
   };
