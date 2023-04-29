@@ -42,3 +42,8 @@ dbuser.json
 # System files
 .DS_Store
 Thumbs.db
+
+# Firebase
+.firebase/
+.firebaserc
+firebase.json
