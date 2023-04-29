@@ -1,13 +1,15 @@
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { map } from 'rxjs';
 import { Credenciales } from '../models/credenciales';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  url="http://localhost:8080/login";
+  urlService=environment.serviceUrl;
+  url=this.urlService + "login";
   constructor(private http:HttpClient) {}
 
    iniciarSesion(credentials:Credenciales){

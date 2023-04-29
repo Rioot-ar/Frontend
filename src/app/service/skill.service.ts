@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Habilidad } from '../models/habilidad';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillService {
-
-  private urlApi = 'http://localhost:8080/api/habilidad';
+  urlService=environment.serviceUrl;
+  private urlApi = this.urlService + 'api/habilidad';
   constructor(private http:HttpClient) { }
   
   getSkill(): Observable<any>{
