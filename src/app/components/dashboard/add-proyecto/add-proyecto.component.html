@@ -12,19 +12,19 @@
         <form [formGroup]="formLogin" (submit)="sendProyecto()">
           <div class="mb-4">
             <label for="nombre_proyecto" class="form-label"><h1>Nombre</h1></label>
-            <input type="text" class="form-control" id="nombre_proyecto" aria-describedby="emailHelp" formControlName="nombre_proyecto">
+            <input type="text" class="form-control" id="nombre_proyecto_pr" aria-describedby="emailHelp" formControlName="nombre_proyecto">
           </div>
           <div class="mb-4">
             <label for="descripcion" class="form-label"><h1>Descripcion</h1></label>
-            <input type="text" class="form-control" id="descripcion" formControlName="descripcion">
+            <input type="text" class="form-control" id="descripcion_pr" formControlName="descripcion">
           </div>
           <div class="mb-4">
             <label class="form-label" for="url_proyecto"><h1>Link</h1></label>
-            <input type="url" class="form-control" id="url_proyecto" formControlName="url_proyecto">
+            <input type="url" class="form-control" id="url_proyecto_pr" formControlName="url_proyecto">
           </div>
           <div class="mb-4">
             <label for="imagen" class="form-label"><h1>Imagen</h1></label>
-            <input type="url" class="form-control" id="imagen" aria-describedby="emailHelp" formControlName="imagen">
+            <input type="url" class="form-control" id="imagen_pr" aria-describedby="emailHelp" formControlName="imagen">
           </div>
           <div class="modal-footer">
             <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>

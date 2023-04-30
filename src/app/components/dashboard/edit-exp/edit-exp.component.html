@@ -12,27 +12,27 @@
         <form [formGroup]="formLogin" (submit)="sendExperiencia()">
           <div class="mb-6">
             <label for="nombre_empresa" class="form-label"><h1>Nombre Empresa</h1></label>
-            <input type="text" class="form-control" id="nombre_empresa" aria-describedby="emailHelp" formControlName="nombre_empresa">
+            <input type="text" class="form-control" id="nombre_empresa_{{exp.id}}" aria-describedby="emailHelp" formControlName="nombre_empresa">
           </div>
           <div class="mb-6">
             <label for="cargo" class="form-label"><h1>Cargo</h1></label>
-            <input type="text" class="form-control" id="cargo" aria-describedby="emailHelp" formControlName="cargo">
+            <input type="text" class="form-control" id="cargo_{{exp.id}}" aria-describedby="emailHelp" formControlName="cargo">
           </div>
           <div class="mb-6">
             <label for="fecha_inicio" class="form-label"><h1>Fecha Inicio</h1></label>
-            <input type="text" class="form-control" id="fecha_inicio" aria-describedby="emailHelp" formControlName="fecha_inicio">
+            <input type="text" class="form-control" id="fecha_inicio_{{exp.id}}" aria-describedby="emailHelp" formControlName="fecha_inicio">
           </div>
           <div class="mb-6">
             <label for="fecha_fin" class="form-label"><h1>Fecha Fin</h1></label>
-            <input type="text" class="form-control" id="fecha_fin" aria-describedby="emailHelp" formControlName="fecha_fin">
+            <input type="text" class="form-control" id="fecha_fin_{{exp.id}}" aria-describedby="emailHelp" formControlName="fecha_fin">
           </div>
           <div class="mb-6">
             <label for="descripcion" class="form-label"><h1>Descripcion</h1></label>
-            <input type="text" class="form-control" id="descripcion" formControlName="descripcion">
+            <input type="text" class="form-control" id="descripcion_{{exp.id}}" formControlName="descripcion">
           </div>
           <div class="mb-6">
             <label class="form-label" for="imagen"><h1>Logo</h1></label>
-            <input type="url" class="form-control" id="imagen" formControlName="imagen">
+            <input type="url" class="form-control" id="imagen_{{exp.id}}" formControlName="imagen">
           </div>
           <div class="modal-footer">
             <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>

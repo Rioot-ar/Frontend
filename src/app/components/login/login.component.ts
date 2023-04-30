@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { faBars, faDungeon } from '@fortawesome/free-solid-svg-icons';
+import { Credenciales } from 'src/app/models/credenciales';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -13,17 +14,18 @@ import { AuthService } from 'src/app/service/auth.service';
 
 
 export class LoginComponent {
-  public formLogin: FormGroup;
+  
+  formLogin=this.formBuilder.group({
+    email:['',[Validators.required,Validators.minLength(4)]],
+    password:['',[Validators.required,Validators.minLength(8)]]
+  });
+
   faBars = faBars;
   faDungeon = faDungeon;
   logStatus:boolean;
   
 
   constructor(private formBuilder: FormBuilder, private auth:AuthService, private ruta:Router){
-    this.formLogin=this.formBuilder.group({
-      user:['',[Validators.required]],
-      password:['',Validators.required]
-    })
     this.logStatus=auth.getStatus();
   }
   ngOnInit():void{
@@ -36,20 +38,21 @@ export class LoginComponent {
     this.ruta.navigate([""]);
   }
 
-  send(event:Event){
-
-    const creds = {
-      email: this.formLogin.value.user,
-      password: this.formLogin.value.password
-    }
-    this.auth.iniciarSesion(creds)
-      .subscribe(response=>{
+  login(){
+    this.auth.iniciarSesion(this.formLogin.value as Credenciales).subscribe({
+      next:(Algo)=>{
+      },
+      error: (error)=>{
+        alert('ERROR EN LAS CREDENCIALES');
+      },
+      complete:()=>{
         
         this.ruta.navigate(['/dashboard']);
-      })
-
-
+      }
+    })
+    this.formLogin.reset();
   }
 
-  
+  get email(){return this.formLogin.controls.email;}
+  get password(){return this.formLogin.controls.password;}
 }

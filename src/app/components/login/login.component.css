@@ -1,6 +1,12 @@
+.ng-valid:not(form).ng-touched {
+    border-left: 5px solid #42A948; /* green */
+}
+  
+.ng-invalid:not(form).ng-touched{
+    border-left: 5px solid #a94442; /* red */
+}
 
-.dropdown-menu{
-    left: auto;
-    right: 0px;
-    min-width: 15rem;
+h1{
+    background: none;
+    -webkit-text-fill-color:black;
 }

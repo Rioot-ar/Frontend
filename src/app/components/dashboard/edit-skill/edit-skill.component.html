@@ -11,11 +11,11 @@
         <form [formGroup]="formLogin" (submit)="sendHabilidad()">
           <div class="mb-3">
             <label for="nombre_habilidad" class="form-label"><h1>Habilidad</h1></label>
-            <input type="text" class="form-control" id="nombre_habilidad" aria-describedby="emailHelp" formControlName="nombre_habilidad">
+            <input type="text" class="form-control" id="nombre_habilidad_{{skill.id}}" aria-describedby="emailHelp" formControlName="nombre_habilidad">
           </div>
           <div class="mb-3">
             <label for="nivel" class="form-label"><h1>Nivel</h1></label>
-            <input type="text" class="form-control" id="nivel" formControlName="nivel">
+            <input type="text" class="form-control" id="nivel_{{skill.id}}" formControlName="nivel">
           </div>
           <div class="modal-footer">
             <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>
