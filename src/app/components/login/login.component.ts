@@ -35,6 +35,7 @@ export class LoginComponent {
 
   logout(){
     this.auth.cerrarSesion();
+    this.logStatus=false;
     this.ruta.navigate([""]);
   }
 
