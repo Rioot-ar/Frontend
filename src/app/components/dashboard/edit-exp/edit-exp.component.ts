@@ -22,8 +22,8 @@ export class EditExpComponent {
       cargo:[this.exp.cargo,[Validators.required]],
       fecha_inicio:[this.exp.fecha_inicio,[Validators.required]],
       fecha_fin:[this.exp.fecha_fin,[Validators.required]],
-      descripcion:[this.exp.descripcion,Validators.required],
-      imagen:[this.exp.imagen,Validators.required]
+      descripcion:[this.exp.descripcion,[Validators.required,Validators.maxLength(512)]],
+      imagen:[this.exp.imagen,[Validators.required,Validators.maxLength(255)]]
     })
   }
 
@@ -39,5 +39,17 @@ export class EditExpComponent {
     }
     this.onEditExp.emit(exp);
   }
+
+  get nombre() { return this.formLogin.controls['nombre_empresa']; }
+
+  get titulo() { return this.formLogin.controls['cargo']; }
+
+  get inicio() { return this.formLogin.controls['fecha_inicio']; }
+
+  get fin() { return this.formLogin.controls['fecha_fin']; }
+
+  get descripcion() { return this.formLogin.controls['descripcion']; }
+
+  get imagen() { return this.formLogin.controls['imagen']; }
 
 }

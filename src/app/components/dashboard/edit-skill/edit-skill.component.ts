@@ -19,7 +19,7 @@ export class EditSkillComponent {
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
       nombre_habilidad:[this.skill.nombre_habilidad,[Validators.required]],
-      nivel:[this.skill.nivel,Validators.required]
+      nivel:[this.skill.nivel,[Validators.required, Validators.min(0),Validators.max(100)]]
     })
   }
 
@@ -33,4 +33,7 @@ export class EditSkillComponent {
     this.onEditSkill.emit(exp);
   }
 
+  get nombre() { return this.formLogin.controls['nombre_habilidad']; }
+
+  get nivel() { return this.formLogin.controls['nivel']; }
 }

@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Proyecto } from 'src/app/models/proyecto';
 
@@ -10,25 +10,29 @@ import { Proyecto } from 'src/app/models/proyecto';
 })
 export class AddProyectoComponent {
   @Output() onAddProyecto: EventEmitter<Proyecto> = new EventEmitter();
-  formLogin!: FormGroup;
+
+  formLogin=this.formBuilder.group({
+    nombre_proyecto:['',[Validators.required]],
+    descripcion:['',[Validators.required,Validators.maxLength(511)]],
+    url_proyecto:['',[Validators.required,Validators.maxLength(254)]],
+    imagen:['',[Validators.required,Validators.maxLength(254)]]
+  });
+
+
   faPlus=faPlus;
   constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
-    this.formLogin=this.formBuilder.group({
-      nombre_proyecto:['',[Validators.required]],
-      descripcion:['',Validators.required],
-      url_proyecto:['',Validators.required],
-      imagen:['',Validators.required]
-    })
   }
 
   sendProyecto():any{
-    const exp = {
-      nombre_proyecto: this.formLogin.value.nombre_proyecto,
-      descripcion: this.formLogin.value.descripcion,
-      url_proyecto: this.formLogin.value.url_proyecto,
-      imagen: this.formLogin.value.imagen,
-    }
-    this.onAddProyecto.emit(exp);
+    this.onAddProyecto.emit(this.formLogin.value as Proyecto);
   }
+
+  get nombre(){return this.formLogin.controls.nombre_proyecto;}
+
+  get descripcion(){return this.formLogin.controls.descripcion;}
+  
+  get url(){return this.formLogin.controls.url_proyecto;}
+  
+  get imagen(){return this.formLogin.controls.imagen;}
 }

@@ -12,20 +12,19 @@ export class EditAcercadeComponent {
   @Input() persona!:Persona;
   @Output() onEditSobreMi: EventEmitter<Persona> = new EventEmitter();
   
-  formLogin!: FormGroup;
+  formLogin!:FormGroup;
   faPen = faPen;
 
   constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
-      
       nombre:[this.persona.nombre,[Validators.required]],
       apellido:[this.persona.apellido,[Validators.required]],
-      telefono:[this.persona.telefono,[Validators.required]],
+      telefono:[this.persona.telefono,[Validators.required,Validators.max(9999999999)]],
       correo:[this.persona.correo,[Validators.required]],
-      url_foto:[this.persona.url_foto,[Validators.required]],
-      url_banner:[this.persona.url_banner,Validators.required],
-      sobre_mi:[this.persona.sobre_mi,Validators.required],
+      url_foto:[this.persona.url_foto,[Validators.required,Validators.maxLength(255)]],
+      url_banner:[this.persona.url_banner,[Validators.required,Validators.maxLength(255)]],
+      sobre_mi:[this.persona.sobre_mi,[Validators.required,Validators.maxLength(512)]],
       cargo:[this.persona.cargo,Validators.required]
     })
   }
@@ -45,5 +44,20 @@ export class EditAcercadeComponent {
     
     this.onEditSobreMi.emit(per);
   }
-  
+ 
+  get nombre() { return this.formLogin.controls['nombre']; }
+
+  get apellido() { return this.formLogin.controls['apellido']; }
+
+  get telefono() { return this.formLogin.controls['telefono']; }
+
+  get correo() { return this.formLogin.controls['correo']; }
+
+  get foto() { return this.formLogin.controls['url_foto']; }
+
+  get banner() { return this.formLogin.controls['url_banner']; }
+
+  get sobre() { return this.formLogin.controls['sobre_mi']; }
+
+  get cargo() { return this.formLogin.controls['cargo']; }
 }

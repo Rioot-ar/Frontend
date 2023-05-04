@@ -17,14 +17,23 @@
           <div class="mb-4">
             <label for="descripcion" class="form-label"><h1>Descripcion</h1></label>
             <input type="text" class="form-control" id="descripcion_pr" formControlName="descripcion">
+            <div *ngIf="descripcion.invalid && (descripcion.dirty || descripcion.touched)" class="text-danger">
+              <div *ngIf="descripcion.errors?.['maxlength']"> Descripcion demasiada larga </div>
+            </div>
           </div>
           <div class="mb-4">
             <label class="form-label" for="url_proyecto"><h1>Link</h1></label>
             <input type="url" class="form-control" id="url_proyecto_pr" formControlName="url_proyecto">
+            <div *ngIf="url.invalid && (url.dirty || url.touched)" class="text-danger">
+              <div *ngIf="url.errors?.['maxlength']"> Link demasiado extenso, no debe superar los 255 caracteres</div>
+            </div>
           </div>
           <div class="mb-4">
             <label for="imagen" class="form-label"><h1>Imagen</h1></label>
             <input type="url" class="form-control" id="imagen_pr" aria-describedby="emailHelp" formControlName="imagen">
+            <div *ngIf="imagen.invalid && (imagen.dirty || imagen.touched)" class="text-danger">
+              <div *ngIf="imagen.errors?.['maxlength']"> Link demasiado extenso, no debe superar los 255 caracteres</div>
+            </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>

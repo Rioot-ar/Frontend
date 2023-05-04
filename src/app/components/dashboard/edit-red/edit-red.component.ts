@@ -19,8 +19,8 @@ export class EditRedComponent {
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
       nombre_red:[this.red.nombre_red,[Validators.required]],
-      url_red:[this.red.url_red,Validators.required],
-      imagen:[this.red.imagen,Validators.required]
+      url_red:[this.red.url_red,[Validators.required,Validators.maxLength(255)]],
+      imagen:[this.red.imagen,[Validators.required,Validators.maxLength(255)]]
     })
   }
 
@@ -34,5 +34,9 @@ export class EditRedComponent {
     
     this.onEditRed.emit(exp);
   }
+  get nombre() { return this.formLogin.controls['nombre_red']; }
 
+  get url() { return this.formLogin.controls['url_red']; }
+
+  get imagen() { return this.formLogin.controls['imagen']; }
 }

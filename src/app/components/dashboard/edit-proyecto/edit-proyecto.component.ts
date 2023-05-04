@@ -19,9 +19,9 @@ export class EditProyectoComponent {
   ngOnInit():void{
     this.formLogin=this.formBuilder.group({
       nombre_proyecto:[this.proyecto.nombre_proyecto,[Validators.required]],
-      descripcion:[this.proyecto.descripcion,Validators.required],
-      url_proyecto:[this.proyecto.url_proyecto,Validators.required],
-      imagen:[this.proyecto.imagen,Validators.required]
+      descripcion:[this.proyecto.descripcion,[Validators.required,Validators.maxLength(512)]],
+      url_proyecto:[this.proyecto.url_proyecto,[Validators.required,Validators.maxLength(255)]],
+      imagen:[this.proyecto.imagen,[Validators.required,Validators.maxLength(255)]]
     })
   }
 
@@ -36,4 +36,11 @@ export class EditProyectoComponent {
     
     this.onEditProyecto.emit(exp);
   }
+  get nombre() { return this.formLogin.controls['nombre_proyecto']; }
+
+  get url_proyecto() { return this.formLogin.controls['url_proyecto']; }
+
+  get descripcion() { return this.formLogin.controls['descripcion']; }
+
+  get imagen() { return this.formLogin.controls['imagen']; }
 }

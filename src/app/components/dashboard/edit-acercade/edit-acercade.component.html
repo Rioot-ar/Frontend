@@ -12,10 +12,16 @@
           <div class="mb-8">
             <label for="url_foto" class="form-label"><h1>Foto de Perfil</h1></label>
             <input type="url" class="form-control" id="url_foto_ad" aria-describedby="emailHelp" formControlName="url_foto">
+            <div *ngIf="foto.invalid && (foto.dirty || foto.touched)" class="text-danger">
+              <div *ngIf="foto.errors?.['maxlength']"> El link no puede tener mas de 255 caracteres </div>
+            </div>
           </div>
           <div class="mb-8">
             <label for="url_banner" class="form-label"><h1>Banner</h1></label>
             <input type="url" class="form-control" id="url_banner_ad" formControlName="url_banner">
+            <div *ngIf="banner.invalid && (banner.dirty || banner.touched)" class="text-danger">
+              <div *ngIf="banner.errors?.['maxlength']"> El link no puede tener mas de 255 caracteres </div>
+            </div>
           </div>
           <div class="mb-8">
             <label for="nombre" class="form-label"><h1>Nombre</h1></label>
@@ -27,7 +33,10 @@
           </div>
           <div class="mb-8">
             <label for="telefono" class="form-label"><h1>Telefono</h1></label>
-            <input type="text" class="form-control" id="telefono_ad" aria-describedby="emailHelp" formControlName="telefono">
+            <input type="number" class="form-control" id="telefono_ad" aria-describedby="emailHelp" formControlName="telefono">
+            <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="text-danger">
+              <div *ngIf="telefono.errors?.['max']"> El telefono no puede tener mas de 10 números </div>
+            </div>
           </div>
           <div class="mb-8">
             <label for="correo" class="form-label"><h1>Correo</h1></label>
@@ -40,6 +49,9 @@
           <div class="mb-8">
             <label class="form-label" for="sobre_mi"><h1>Descripcion habilidades</h1></label>
             <input type="url" class="form-control" id="sobre_mi_ad" formControlName="sobre_mi">
+            <div *ngIf="sobre.invalid && (sobre.dirty || sobre.touched)" class="text-danger">
+              <div *ngIf="sobre.errors?.['maxlength']"> Descripcion demasiado extensa </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-primary" [disabled]="formLogin.invalid" data-bs-dismiss="modal">Submit</button>

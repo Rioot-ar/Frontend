@@ -1,8 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Experiencia } from 'src/app/models/experiencia';
-import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
   selector: 'app-add-exp',
@@ -12,29 +11,34 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
 export class AddExpComponent {
   
   @Output() onAddExp: EventEmitter<Experiencia> = new EventEmitter();
-  formLogin!: FormGroup;
+
+  formLogin = this.formBuilder.group({
+    nombre_empresa:['',[Validators.required]],
+    cargo:['',[Validators.required]],
+    fecha_inicio:['',[Validators.required]],
+    fecha_fin:['',[Validators.required]],
+    descripcion:['',[Validators.required,Validators.maxLength(512)]],
+    imagen:['',[Validators.required,Validators.maxLength(255)]]
+  })
+
   faPlus=faPlus;
-  constructor(private formBuilder: FormBuilder,private expService:ExperienciaService){}
+  constructor(private formBuilder: FormBuilder){}
   ngOnInit():void{
-    this.formLogin=this.formBuilder.group({
-      nombre_empresa:['',[Validators.required]],
-      cargo:['',[Validators.required]],
-      fecha_inicio:['',[Validators.required]],
-      fecha_fin:['',[Validators.required]],
-      descripcion:['',Validators.required],
-      imagen:['',Validators.required]
-    })
   }
 
   sendExperiencia():any{
-    const exp = {
-      nombre_empresa: this.formLogin.value.nombre_empresa,
-      cargo: this.formLogin.value.cargo,
-      fecha_inicio: this.formLogin.value.fecha_inicio,
-      fecha_fin: this.formLogin.value.fecha_fin,
-      descripcion: this.formLogin.value.descripcion,
-      imagen: this.formLogin.value.imagen
-    }
-    this.onAddExp.emit(exp);
+    this.onAddExp.emit(this.formLogin.value as Experiencia);
   }
+
+  get nombre(){return this.formLogin.controls.nombre_empresa};
+  
+  get titulo(){return this.formLogin.controls.cargo};
+  
+  get inicio(){return this.formLogin.controls.fecha_inicio};
+  
+  get fin(){return this.formLogin.controls.fecha_fin};
+  
+  get descripcion(){return this.formLogin.controls.descripcion};
+  
+  get imagen(){return this.formLogin.controls.imagen};
 }

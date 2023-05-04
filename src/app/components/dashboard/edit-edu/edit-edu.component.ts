@@ -22,8 +22,8 @@ export class EditEduComponent {
       titulo:[this.edu.titulo,[Validators.required]],
       fecha_inicio:[this.edu.fecha_inicio,[Validators.required]],
       fecha_fin:[this.edu.fecha_fin,[Validators.required]],
-      descripcion:[this.edu.descripcion,Validators.required],
-      imagen:[this.edu.imagen,Validators.required]
+      descripcion:[this.edu.descripcion,[Validators.required,Validators.maxLength(512)]],
+      imagen:[this.edu.imagen,[Validators.required,Validators.maxLength(255)]]
     })
   }
 
@@ -40,4 +40,15 @@ export class EditEduComponent {
     this.onEditEdu.emit(edu);
   }
 
+  get nombre() { return this.formLogin.controls['nombre_institucion']; }
+
+  get titulo() { return this.formLogin.controls['titulo']; }
+
+  get inicio() { return this.formLogin.controls['fecha_inicio']; }
+
+  get fin() { return this.formLogin.controls['fecha_fin']; }
+
+  get descripcion() { return this.formLogin.controls['descripcion']; }
+
+  get imagen() { return this.formLogin.controls['imagen']; }
 }
